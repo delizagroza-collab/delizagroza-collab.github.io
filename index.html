@@ -24,7 +24,7 @@
 <main class="wrap home home-v2">
   <section class="hero hero-v2">
     <figure class="hero-photo hero-photo-v2">
-      <img data-b64="assets/portrait.b64" alt="陈佳路个人照片">
+      <img src="assets/portrait.jpg" alt="陈佳路个人照片">
     </figure>
 
     <div class="hero-copy hero-copy-v2">
@@ -82,7 +82,7 @@
       </a>
 
       <a class="home-card life-card-home" href="life.html">
-        <img data-b64="assets/dance-group.b64" alt="舞蹈与校园生活">
+        <img src="assets/dance-group.jpg" alt="舞蹈与校园生活">
         <div class="card-label">
           <div class="card-title">生活 Life</div>
           <div class="card-sub">Dance · Campus · Painting</div>
@@ -98,18 +98,6 @@
   </section>
 </main>
 
-<script>
-async function loadB64(){
-  for(const img of document.querySelectorAll('img[data-b64]')){
-    try{
-      const text=await fetch(img.dataset.b64).then(r=>{if(!r.ok)throw new Error();return r.text()});
-      img.src='data:image/jpeg;base64,'+text.trim();
-    }catch(e){
-      img.closest('.home-card,.hero-photo')?.classList.add('image-missing');
-    }
-  }
-}
-loadB64();
-</script>
+
 </body>
 </html>
