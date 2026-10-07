@@ -77,3 +77,36 @@
 .home-v2 .experience-card .card-label{color:var(--ink)}
 .home-v2 .project-card .card-sub,
 .home-v2 .experience-card .card-sub{color:var(--muted);opacity:1}
+
+/* --- Life V2 --- */
+.life-hero{padding-bottom:34px}
+.life-page{padding-top:34px}
+.life-feature{display:grid;grid-template-columns:1.35fr .65fr;gap:28px;align-items:stretch;margin-bottom:34px}
+.life-feature img{width:100%;height:430px;object-fit:cover;border-radius:10px}
+.life-feature-copy{display:flex;flex-direction:column;justify-content:flex-end;padding:8px 4px 14px}
+.life-feature-copy h2{font-size:31px;margin:8px 0 12px}
+.life-feature-copy p{color:var(--muted);max-width:420px}
+.life-story-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 22px}
+.life-story{margin:0}
+.life-story img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:9px;background:#eceee9}
+.life-story-copy{padding:13px 2px 0}
+.life-story-copy h3{margin-top:5px}
+.life-story-copy p{color:var(--muted);margin-top:6px}
+.life-bottom{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;margin-top:44px;align-items:stretch}
+.life-small-photo img{width:100%;height:300px;object-fit:cover;border-radius:9px}
+.painting-placeholder{min-height:300px;border:1px dashed #b9c0ba;border-radius:9px;background:#fbfaf6;padding:34px;display:flex;flex-direction:column;justify-content:flex-end}
+.painting-placeholder h2{font-size:29px;margin:8px 0}
+.painting-placeholder p{color:var(--muted)}
+@media(max-width:900px){
+  .life-feature,.life-bottom{grid-template-columns:1fr}
+  .life-feature img{height:auto;aspect-ratio:4/3}
+  .life-story-grid{grid-template-columns:1fr}
+  .life-small-photo img{height:auto}
+}
+
+/* portrait tuning for the uploaded photo */
+.hero-photo-v2 img{object-position:center 35%}
+.home-v2 .project-card .card-title,
+.home-v2 .experience-card .card-title{color:var(--ink)!important}
+.home-v2 .project-card .card-sub,
+.home-v2 .experience-card .card-sub{color:var(--muted)!important}
