@@ -256,3 +256,48 @@
   .life-casual-wide{grid-column:auto}
   .v4-scroll{height:440px}
 }
+
+/* --- Life V5: photo-first editorial layout --- */
+.life-v5-hero{padding-bottom:30px}
+.life-v5-hero h1{max-width:780px}
+.life-v5-hero .intro{max-width:660px}
+.life-v5{padding-top:30px}
+
+.life-hero-photo{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.45fr);gap:28px;align-items:end;margin-bottom:72px}
+.life-hero-photo>img{width:100%;height:auto;display:block;border-radius:12px;background:#f1f2ee}
+.life-simple-caption{padding:0 4px 8px}
+.life-simple-caption>span{font-size:12px;color:#65756b}
+.life-simple-caption h2{font-size:30px;margin:6px 0 6px}
+.life-simple-caption p{color:var(--muted);font-size:14px}
+
+.life-zhiqiu,.life-memory-section{margin-top:58px}
+.life-zhiqiu-title{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:end;border-top:1px solid var(--line);padding-top:17px;margin-bottom:24px}
+.life-zhiqiu-title>span{font-size:11.5px;letter-spacing:.08em;color:#8b958e;text-transform:uppercase}
+.life-zhiqiu-title h2{font-size:28px}
+
+.life-editorial-row{display:grid;grid-template-columns:.44fr .56fr;gap:24px;align-items:start}
+.life-figure{margin:0}
+.life-figure img{width:100%;height:auto!important;display:block;object-fit:contain!important;object-position:center!important;border-radius:11px;background:#f1f2ee}
+.life-figure figcaption{display:flex;justify-content:space-between;gap:18px;align-items:baseline;padding:10px 2px 0}
+.life-figure figcaption span{font-size:11.5px;color:#6c786f;white-space:nowrap}
+.life-figure figcaption p{font-size:13px;color:var(--muted);text-align:right}
+
+.life-memory-grid{display:grid;grid-template-columns:.72fr 1fr;gap:24px;align-items:start}
+.life-scroll-card-v5{grid-row:span 2;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.v5-scroll{height:560px;background:#f0f1ed}
+.v5-scroll img{width:100%;height:auto!important;display:block;object-fit:contain!important}
+.life-bp-single{margin-top:22px}
+
+.life-ending{max-width:680px;margin:72px auto 10px;padding:30px 20px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted)}
+.life-ending span{font-size:21px}
+.life-ending p{margin-top:7px;font-family:Georgia,"Songti SC","STSong",serif;font-size:18px;line-height:1.8}
+
+@media(max-width:900px){
+  .life-hero-photo,.life-editorial-row,.life-memory-grid{grid-template-columns:1fr}
+  .life-zhiqiu-title{grid-template-columns:1fr;gap:5px}
+  .life-scroll-card-v5{grid-row:auto}
+  .v5-scroll{height:460px}
+  .life-figure figcaption{display:block}
+  .life-figure figcaption p{text-align:left;margin-top:3px}
+  .life-hero-photo{margin-bottom:48px}
+}
