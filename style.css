@@ -72,3 +72,8 @@
   .home-v2 .home-links{grid-template-columns:1fr 1fr}
   .home-v2 .home-card{height:145px}
 }
+
+.home-v2 .project-card .card-label,
+.home-v2 .experience-card .card-label{color:var(--ink)}
+.home-v2 .project-card .card-sub,
+.home-v2 .experience-card .card-sub{color:var(--muted);opacity:1}
