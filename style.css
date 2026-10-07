@@ -776,3 +776,10 @@
  .home-v4-sidecard{min-height:155px}
  .home-v4-wide{height:145px}
 }
+
+/* V4.1 final spacing refinement */
+.home-v4-photo{height:400px}
+.home-v4-intro{min-height:400px}
+.home-v4-wide{height:142px}
+@media(max-width:1050px){.home-v4-photo,.home-v4-intro{height:390px;min-height:390px}}
+@media(max-width:760px){.home-v4-photo{height:auto}.home-v4-intro{height:auto;min-height:0}}
