@@ -157,3 +157,59 @@
   .vertical-photo-scroll{height:460px}
   .life-small-shot img{height:auto;aspect-ratio:4/3}
 }
+
+
+/* --- Preserve original photo framing --- */
+.hero-photo-v2{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f1f2ee;
+}
+.hero-photo-v2 img{
+  width:100%;
+  height:100%;
+  object-fit:contain!important;
+  object-position:center center!important;
+}
+
+.life-card-home{
+  background:#eef0ec!important;
+}
+.life-card-home img{
+  object-fit:contain!important;
+  object-position:center center!important;
+}
+
+.life-wide-card>img,
+.life-moment img,
+.life-backstage img,
+.life-small-shot img,
+.life-feature img,
+.life-story img,
+.life-small-photo img{
+  width:100%;
+  height:auto!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  background:#f1f2ee;
+}
+
+/* Long photos stay scrollable without trimming the original image */
+.vertical-photo-scroll img{
+  width:100%;
+  height:auto!important;
+  object-fit:contain!important;
+  border-radius:9px;
+}
+
+@media(max-width:900px){
+  .life-wide-card>img,
+  .life-moment img,
+  .life-backstage img,
+  .life-small-shot img{
+    height:auto!important;
+    aspect-ratio:auto!important;
+  }
+}
