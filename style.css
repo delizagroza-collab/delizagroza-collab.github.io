@@ -301,3 +301,39 @@
   .life-figure figcaption p{text-align:left;margin-top:3px}
   .life-hero-photo{margin-bottom:48px}
 }
+
+/* --- shared header home button --- */
+.brand-group{display:flex;align-items:center;gap:10px}
+.home-chip{display:inline-flex;align-items:center;gap:4px;padding:5px 9px;border:1px solid #cfdbd2;background:#eef3ef;border-radius:999px;font-size:11px;color:#345445;transition:.18s ease}
+.home-chip:hover{background:#dfe9e2;transform:translateY(-1px)}
+.active-nav{box-shadow:inset 0 -2px 0 rgba(255,255,255,.45)}
+
+/* --- Resume V2 --- */
+.resume-hero{padding-bottom:30px}
+.resume-page-v2{padding-top:34px}
+.resume-viewer-wrap{max-width:920px;margin:0 auto 64px}
+.resume-viewer-head{height:52px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 16px;border:1px solid var(--line);border-bottom:0;border-radius:10px 10px 0 0;background:#f2f4f0;font-size:13px}
+.resume-viewer-head>div{display:flex;align-items:center;gap:9px}
+.resume-dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.resume-open-btn{font-size:12px;color:var(--accent);font-weight:650}
+.resume-pdf-frame{height:780px;border:1px solid var(--line);background:#e8ebe6;overflow:hidden}
+.resume-pdf-frame iframe{width:100%;height:100%;border:0;display:block;background:white}
+.resume-scroll-tip{text-align:center;font-size:11px;color:var(--muted);margin-top:9px}
+.supporting-docs{border-top:1px solid var(--line);padding-top:42px}
+.support-head{max-width:650px;margin-bottom:24px}
+.support-head h2{margin-top:6px}
+.support-head p{color:var(--muted);margin-top:7px}
+.doc-grid{display:grid;grid-template-columns:1.25fr .875fr .875fr;gap:14px}
+.doc-card{min-height:138px;border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:18px;display:grid;grid-template-columns:auto 1fr auto;gap:13px;align-items:start;transition:.18s ease}
+.doc-card:hover{border-color:#aab7ae;transform:translateY(-2px);box-shadow:0 10px 26px rgba(25,40,31,.05)}
+.doc-icon{width:38px;height:38px;border-radius:9px;background:#e8efe9;display:grid;place-items:center;font-family:Georgia,serif;color:var(--accent);font-size:13px}
+.doc-card span{font-size:10px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.doc-card h3{font-size:20px;margin-top:3px}
+.doc-card p{font-size:12px;color:var(--muted);margin-top:4px}
+.doc-card>b{font-size:17px;font-weight:400;color:#87948b}
+.privacy-note{font-size:11px;color:#879188;margin-top:12px}
+@media(max-width:900px){
+  .brand-group{gap:6px}.home-chip{padding:5px 7px}
+  .resume-pdf-frame{height:650px}
+  .doc-grid{grid-template-columns:1fr}
+}
