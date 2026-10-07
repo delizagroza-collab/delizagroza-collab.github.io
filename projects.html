@@ -1,38 +1,14 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>项目｜陈佳路</title><meta name="description" content="陈佳路的工程项目：电力电子、控制、MATLAB与Simulink。"><link rel="stylesheet" href="style.css?v=20261008a"></head><body><header class="site-header"><div class="wrap nav"><div class="brand-group"><a class="brand" href="index.html">陈佳路</a><a class="home-chip" href="index.html">⌂ 首页</a></div><nav class="navlinks"><a href="projects.html">项目</a><a href="experience.html">经历</a><a href="ai.html">AI</a><a href="life.html">生活</a><a class="contact-nav" href="contact.html">联系我</a><a class="resume-btn" href="resume.html">简历</a></nav></div></header>
-<section class="page-hero"><div class="wrap"><div class="kicker">ENGINEERING PROJECTS</div><h1>项目 / Projects</h1><p class="intro">我更关心模型为什么这样搭、参数为什么这样选、结果如何验证。这里优先展示可以被追问、可以被量化、也可以被复盘的工程工作。</p></div></section>
-<main class="wrap page-main">
-<section class="section">
-  <a class="project-v5-feature" href="rectifier-case.html">
-    <div class="project-v5-visual">
-      <svg viewBox="0 0 700 390" aria-label="控制角参数扫描趋势示意">
-        <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#d59668"/><stop offset="1" stop-color="#6b8ba8"/></linearGradient></defs>
-        <rect x="0" y="0" width="700" height="390" rx="18" fill="#12171a"/>
-        <g stroke="#344047" stroke-width="1" opacity=".75">
-          <path d="M72 45V330M160 45V330M248 45V330M336 45V330M424 45V330M512 45V330M600 45V330"/>
-          <path d="M72 80H630M72 145H630M72 210H630M72 275H630M72 330H630"/>
-        </g>
-        <path d="M76 102 C150 114,205 130,270 160 S405 235,470 260 S565 292,625 304" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round"/>
-        <g fill="#f0c4a5"><circle cx="76" cy="102" r="8"/><circle cx="270" cy="160" r="8"/><circle cx="470" cy="260" r="8"/><circle cx="625" cy="304" r="8"/></g>
-        <text x="74" y="365" fill="#819097" font-size="18" font-family="monospace">α 30°</text>
-        <text x="555" y="365" fill="#819097" font-size="18" font-family="monospace">120°</text>
-        <text x="74" y="72" fill="#e8ecee" font-size="18" font-family="monospace">Ud_avg</text>
-        <text x="410" y="96" fill="#d8a47f" font-size="15" font-family="monospace">19-point sweep</text>
-      </svg>
-      <div class="tech-corner">MATLAB / SIMULINK · POWER ELECTRONICS</div>
-    </div>
-    <div class="project-v5-copy">
-      <div><div class="kicker">SELECTED ENGINEERING CASE</div><h2>单相桥式全控整流：建模、参数扫描与有源逆变验证</h2><p>R / RL 八组典型工况，控制角 30°–120°、5°步长扩展扫描；进一步比较 RL+FD 续流效果，并通过 RLE 工况验证有源逆变与功率方向。</p>
-      <div class="project-v5-metrics"><div><strong>8</strong><span>BASE CASES</span></div><div><strong>19</strong><span>SWEEP POINTS</span></div><div><strong>−563.44 W</strong><span>REVERSE POWER</span></div></div></div>
-      <div class="project-v5-link">查看完整技术案例 <b>↗</b></div>
-    </div>
-  </a>
-</section>
-
-<section class="section" id="spwm"><div class="section-head"><div><div class="kicker">POWER ELECTRONICS</div><h2>单相 H 桥逆变器双极性 SPWM 调制特性研究</h2></div><p>MATLAB / Simulink · FFT · Harmonic Analysis</p></div>
-<div class="grid-2"><div class="card"><div class="card-body"><span class="tag">MATLAB</span><span class="tag">Simulink</span><span class="tag">FFT</span><div class="result">THD 17.02% → 6.27%</div><p>比较 ma=0.6 / 0.8 / 1.1 的调制状态，并通过改变负载电感观察电流谐波变化。电感由 0.01 H 增至 0.1 H 后，电流 THD 明显下降。</p></div></div>
-<div class="card"><div class="card-body"><div class="kicker">WHAT I DID</div><h3>从模型、频谱到参数判断</h3><p class="small" style="margin-top:14px">搭建单相 H 桥 SPWM 模型；比较线性调制与过调制；分析电压、电流与 FFT；调整负载参数并验证结果；最终整理为完整仿真论文。</p></div></div></div></section>
-
-<section class="section" id="pid"><div class="section-head"><div><div class="kicker">CONTROL</div><h2>数字 PID 控制器设计</h2></div><p>Step Response · Overshoot · Settling Time</p></div>
-<div class="grid-2"><div class="card"><div class="card-body"><div class="kicker">PARAMETER COMPARISON</div><h3>参数选择不是“调到能跑”</h3><p class="small" style="margin-top:12px">针对三阶惯性对象比较 4 组 Kp / Ki / Kd，结合阶跃响应、超调、调节时间和稳态误差选择参数。</p><div class="result" style="font-size:28px">Kp 3 · Ki 0.20 · Kd 12</div></div></div>
-<div class="card"><div class="card-body"><div class="pid-mini-chart"><i style="--h:82%"></i><i style="--h:64%"></i><i style="--h:46%"></i><i style="--h:28%"></i></div><p class="small">用响应速度、超调和稳态误差共同判断，而不是只看单一曲线是否“好看”。</p></div></div></div></section>
-</main></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>正在进入项目｜陈佳路</title>
+<meta http-equiv="refresh" content="0; url=rectifier-case.html">
+<link rel="canonical" href="rectifier-case.html">
+<script>location.replace('rectifier-case.html');</script>
+</head>
+<body>
+<p>正在进入项目页面… <a href="rectifier-case.html">点击这里</a></p>
+</body>
+</html>
