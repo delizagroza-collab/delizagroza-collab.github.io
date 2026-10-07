@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>联系我｜陈佳路</title>
+<link rel="stylesheet" href="style.css?v=20261008a">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <div class="brand-group">
+      <a class="brand" href="index.html">陈佳路</a>
+      <a class="home-chip" href="index.html">⌂ 首页</a>
+    </div>
+    <nav class="navlinks">
+      <a href="projects.html">项目</a>
+      <a href="experience.html">经历</a>
+      <a href="ai.html">AI</a>
+      <a href="life.html">生活</a>
+      <a class="contact-nav contact-current" href="contact.html">联系我</a>
+      <a class="resume-btn" href="resume.html">简历</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap contact-page">
+  <section class="contact-intro">
+    <div class="kicker">CONTACT</div>
+    <h1>联系我。</h1>
+    <p>如果你想进一步了解我的项目、实习经历或课程设计，欢迎联系我。</p>
+  </section>
+
+  <section class="contact-grid">
+    <button class="contact-card" type="button" data-copy="Moxxyou2004">
+      <span class="contact-label">WECHAT</span>
+      <strong>Moxxyou2004</strong>
+      <small>点击复制微信号</small>
+      <b>复制 ↗</b>
+    </button>
+
+    <a class="contact-card" href="resume.html">
+      <span class="contact-label">PHONE</span>
+      <strong>电话</strong>
+      <small>完整号码见简历</small>
+      <b>查看 ↗</b>
+    </a>
+
+    <a class="contact-card contact-card-wide" href="resume.html">
+      <span class="contact-label">EMAIL</span>
+      <strong>邮箱</strong>
+      <small>完整邮箱见简历</small>
+      <b>查看 ↗</b>
+    </a>
+  </section>
+</main>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(btn=>{
+  btn.addEventListener('click', async ()=>{
+    try{
+      await navigator.clipboard.writeText(btn.dataset.copy);
+      const s=btn.querySelector('small');
+      const old=s.textContent;
+      s.textContent='已复制 ✓';
+      setTimeout(()=>s.textContent=old,1400);
+    }catch(e){}
+  });
+});
+</script>
+</body>
+</html>
