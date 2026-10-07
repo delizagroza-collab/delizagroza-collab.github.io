@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>单相桥式全控整流｜Engineering Case Study｜陈佳路</title><meta name="description" content="MATLAB/Simulink 单相桥式全控整流课程设计：R/RL基础工况、5°参数扫描、自动后处理、RL+FD续流分析与RLE有源逆变验证。"><link rel="stylesheet" href="style.css?v=20261007d"></head><body class="case-v5-body"><header class="site-header"><div class="wrap nav"><div class="brand-group"><a class="brand" href="index.html">陈佳路</a><a class="home-chip" href="index.html">⌂ 首页</a></div><nav class="navlinks"><a href="projects.html">项目</a><a href="experience.html">经历</a><a href="ai.html">AI</a><a href="life.html">生活</a><a class="resume-btn" href="resume.html">简历</a></nav></div></header>
+<section class="case-v5-hero"><div class="wrap"><a class="case-back" href="projects.html">← 返回项目</a><div class="case-v5-hero-grid"><div>
+<div class="kicker">POWER ELECTRONICS · MATLAB / SIMULINK · PARAMETRIC STUDY</div><h1>单相桥式全控整流电路<span>建模、参数扫描与有源逆变验证</span></h1>
+<p>这是《计算机仿真技术及应用》课程设计的最终整理版。基于同一套 Simulink 模型，我完成 R / RL 两类负载的 8 个典型工况，并将控制角从 30° 扫描至 120°（步长 5°）；随后分别引入续流二极管与 RLE 负载，讨论电流波形改善和功率回馈条件。</p>
+<div class="case-tags"><span>MATLAB</span><span>Simulink</span><span>Power Electronics</span><span>Data Processing</span><span>AI-assisted Workflow</span></div>
+</div><div class="case-v5-wall"><div class="wall-main"><strong>19</strong><span>CONTROL-ANGLE<br>SWEEP POINTS</span></div><div><strong>8</strong><span>BASELINE CASES</span></div><div class="hot"><strong>−563.44 W</strong><span>REVERSE POWER</span></div></div></div>
+<div class="case-v5-stats"><div><strong>28</strong><span>REPORT PAGES</span></div><div><strong>8</strong><span>BASE CASES</span></div><div><strong>19</strong><span>SWEEP POINTS</span></div><div><strong>6</strong><span>METRICS</span></div><div><strong>−563.44 W</strong><span>REVERSE POWER</span></div></div>
+</div></section>
+
+<div class="case-v5-shell wrap">
+<aside class="case-v5-nav"><div class="kicker">PROJECT INDEX</div><a href="#overview">00 · 研究范围</a><a href="#modeling">01 · 系统建模</a><a href="#experiment">02 · 工况设计</a><a href="#ai-lab">03 · AI 与参数迭代</a><a href="#pipeline">04 · 数据处理</a><a href="#analysis">05 · 参数结果</a><a href="#optimization">06 · 续流分析</a><a href="#validation">07 · 逆变验证</a><a href="#appendix">08 · 技术附录</a></aside>
+
+<main class="case-v5-main">
+<section id="overview"><div class="chapter">00 · SCOPE</div><h2>研究范围 / Scope</h2><p>课程题目规定 R、RL 两类负载和 α=30°、60°、90°、120° 四个典型触发角。完成必做工况后，我继续做三项扩展：用 5° 步长扫描 α；加入续流二极管量化负压区与纹波变化；构造 RLE 工况，用平均功率方向验证有源逆变。</p>
+<div class="capability-map-v5"><div><b>Modeling</b><span>从拓扑到可运行的四晶闸管 Simulink 模型。</span></div><div><b>Experiment Design</b><span>8 个典型工况 + 19 个控制角点。</span></div><div><b>AI-assisted Iteration</b><span>问题拆解、脚本迭代、检查项与回归验证。</span></div><div><b>Data Pipeline</b><span>Scope → Workspace → 稳态窗口 → 指标 → 绘图。</span></div></div></section>
+
+<section id="modeling"><div class="chapter">01 · MODELING</div><h2>系统建模 / Modeling</h2><p>统一电源、触发与测量口径，仅切换负载和控制角，避免比较时同时改变多个条件。</p>
+<div class="topology-v5"><span>220 V / 50 Hz</span><b>→</b><span>4 × Thyristor Bridge</span><b>→</b><span>R / RL / RLE</span><b>→</b><span>Scope + Workspace</span></div>
+<div class="param-grid-v5"><div><small>R</small><strong>20 Ω</strong></div><div><small>RL baseline</small><strong>20 Ω + 0.2 H</strong></div><div><small>α baseline</small><strong>30° / 60° / 90° / 120°</strong></div><div><small>powergui</small><strong>Discrete · Ts=5e−6 s</strong></div></div></section>
+
+<section id="experiment"><div class="chapter">02 · EXPERIMENT DESIGN</div><h2>工况设计 / Experiment Design</h2><p>基础工况负责直接比较，扩展扫描负责检查结论是否在连续参数变化下仍成立。</p><div class="sweep-v5"><div class="sweep-line"></div><span>30°</span><span>60°</span><span>90°</span><span>120°</span><em>5° STEP / 19 POINTS</em></div></section>
+
+<section id="ai-lab"><div class="chapter">03 · AI-ASSISTED ITERATION</div><h2>AI 与参数迭代</h2><p>AI 不是替我给出结论，而是用来减少重复操作和缩短排错路径。每次关键修改之后，我都会重新运行 MATLAB / Simulink，并用波形、公式和指标检查结果。</p>
+<div class="ai-lab-v5"><div><b>01 / 拆任务</b><span>把“8 个基础工况、扩展扫描、续流、逆变”拆成独立可验证步骤。</span></div><div><b>02 / 写脚本</b><span>自动修改 α、循环运行模型、读取 Workspace、计算指标。</span></div><div><b>03 / 自动出图</b><span>用 exportgraphics / savefig 批量保存 PNG、FIG，并创建桌面结果目录。</span></div><div><b>04 / 回归验证</b><span>理论判断与结果不一致时，补做 RLE 工况并检查 Pavg。</span></div></div></section>
+
+<section id="pipeline"><div class="chapter">04 · DATA PIPELINE</div><h2>数据处理 / Data Pipeline</h2><div class="pipeline-v5"><span>Simulink</span><b>→</b><span>Workspace</span><b>→</b><span>Steady-state Window</span><b>→</b><span>6 Metrics</span><b>→</b><span>Batch Plot</span></div><p>统一处理口径的目的，是让不同控制角和不同负载之间的数字真正可比较。</p></section>
+
+<section id="analysis"><div class="chapter">05 · PARAMETRIC RESULTS</div><h2>参数结果 / Parametric Results</h2><p>控制角从 30° 增大到 120° 时，输出平均电压整体下降。相比只看四个典型点，19 点扫描更容易发现趋势是否连续。</p>
+<div class="inline-chart-v5"><svg viewBox="0 0 760 300"><g stroke="#d8d2c8" stroke-width="1"><path d="M70 45V245M70 245H700"/><path d="M70 95H700M70 145H700M70 195H700"/></g><path d="M75 74 C165 87,225 108,300 132 S450 184,520 205 S630 225,695 233" fill="none" stroke="#c56b2d" stroke-width="7" stroke-linecap="round"/><g fill="#c56b2d"><circle cx="75" cy="74" r="7"/><circle cx="300" cy="132" r="7"/><circle cx="520" cy="205" r="7"/><circle cx="695" cy="233" r="7"/></g><text x="70" y="280" font-size="14" fill="#747b80">30°</text><text x="650" y="280" font-size="14" fill="#747b80">120°</text><text x="80" y="32" font-size="14" fill="#747b80">Ud_avg</text></svg></div></section>
+
+<section id="optimization"><div class="chapter">06 · FREEWHEELING DIODE</div><h2>续流分析 / RL + FD</h2><p>在 α=120° 下加入续流二极管，负压区被压制，电流连续性明显改善。</p><div class="delta-grid-v5"><div><strong>38.57% → 0%</strong><span>明显负压区占比</span></div><div><strong>100.88% → 4.30%</strong><span>电流纹波系数 ri</span></div><div><strong>25.61 → 118.00 W</strong><span>Pavg 仍为正</span></div></div></section>
+
+<section id="validation"><div class="chapter">07 · VALIDATION</div><h2>RLE 工况下的有源逆变验证</h2><p>普通 RL 在 α&gt;90° 时可以出现负压区，但无源负载不能持续向交流侧供能。最终验证引入 EM=220 V，并以 Ud_avg&lt;0、Iavg&gt;0、Pavg&lt;0 三个条件共同判断。</p><div class="validation-v5"><div><small>Ud_avg</small><strong>−100.11 V</strong></div><div><small>Iavg</small><strong>+5.99 A</strong></div><div class="hot"><small>Pavg</small><strong>−563.44 W</strong></div></div><div class="status-v5">● ACTIVE INVERSION VERIFIED</div></section>
+
+<section id="appendix"><div class="chapter">08 · APPENDIX</div><h2>技术附录</h2><details><summary>主要仿真参数</summary><p>U2=220 Vrms · f=50 Hz · R=20 Ω · RL baseline=20 Ω + 0.2 H · Extended sweep=30°:5°:120° · RLE=R 20 Ω / L 1 H / EM 220 V / α 120°</p></details><details><summary>最终脚本</summary><p class="mono">export_waveforms_8cases_3subplot_final.m<br>calc_metrics_2deg_final.m（最终代码实际使用 5° 步长）<br>export_waveforms_RL_FD_final.m<br>export_L_compare_RL_FD_current_2s.m<br>export_RLE_inverter_alpha120_final.m</p></details><details><summary>AI 使用边界</summary><p>AI 用于需求拆分、脚本迭代、调试思路、图表规划和文字整理；关键修改后重新运行模型，并以实际波形、公式和计算结果核验。</p></details></section>
+</main></div></body></html>
