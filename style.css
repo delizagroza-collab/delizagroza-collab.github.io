@@ -1041,3 +1041,349 @@
   .hero-v6-line{font-size:19px}
   .chapter-card-v6{height:205px}
 }
+
+
+/* --- Home V7: compact visual chapter grid + restrained motion --- */
+.home-grid-v7{
+  min-height:calc(100vh - 74px);
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-rows:205px 205px;
+  gap:14px;
+  align-content:center;
+  padding:18px 0;
+}
+.hero-v7{
+  grid-column:1 / 3;
+  grid-row:1;
+  display:grid;
+  grid-template-columns:230px minmax(0,1fr);
+  gap:28px;
+  align-items:center;
+  min-width:0;
+}
+.hero-v7-photo{
+  margin:0;
+  width:230px;
+  height:205px;
+  border-radius:11px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#edf0ec;
+}
+.hero-v7-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 29%;
+  display:block;
+  transition:transform .6s cubic-bezier(.2,.7,.2,1);
+}
+.hero-v7-photo:hover img{transform:scale(1.025)}
+.hero-v7-copy{min-width:0;padding-right:10px}
+.hero-v7-copy h1{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:42px;
+  letter-spacing:-.035em;
+  margin:8px 0 8px;
+  line-height:1.05;
+}
+.hero-v7-school{font-size:14.5px;margin-bottom:8px}
+.hero-v7-line{
+  max-width:620px;
+  font-family:Georgia,"Songti SC","STSong",serif;
+  font-size:19.5px;
+  line-height:1.55;
+}
+.hero-v7-meta{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:11px;
+  font-size:11px;
+  color:var(--muted);
+}
+.hero-v7-meta span{display:flex;align-items:center}
+.hero-v7-meta span:not(:last-child):after{
+  content:"";
+  width:3px;height:3px;border-radius:50%;
+  background:#a9b1ab;margin:0 9px;
+}
+
+/* Continuous friendly wave */
+.wave{
+  display:inline-block;
+  transform-origin:70% 72%;
+  font-size:.82em;
+  animation:wave-hand 1.55s ease-in-out infinite;
+}
+@keyframes wave-hand{
+  0%,100%{transform:rotate(0deg)}
+  12%{transform:rotate(18deg)}
+  24%{transform:rotate(-8deg)}
+  36%{transform:rotate(18deg)}
+  48%{transform:rotate(-5deg)}
+  62%{transform:rotate(13deg)}
+  76%{transform:rotate(0deg)}
+}
+
+/* four equal chapter cards */
+.chapter-card-v7{
+  height:205px;
+  border:1px solid var(--line);
+  border-radius:11px;
+  overflow:hidden;
+  position:relative;
+  isolation:isolate;
+  transition:transform .2s cubic-bezier(.2,.7,.2,1),box-shadow .2s ease,border-color .2s ease;
+  cursor:pointer;
+}
+.experience-card-v7{grid-column:3;grid-row:1}
+.project-card-v7{grid-column:1;grid-row:2}
+.life-card-v7{grid-column:2;grid-row:2}
+.ai-card-v7{grid-column:3;grid-row:2}
+.chapter-card-v7:hover{
+  transform:translateY(-4px);
+  border-color:#a7b4ab;
+  box-shadow:0 14px 34px rgba(24,39,31,.09);
+}
+.chapter-card-v7-bg{
+  position:absolute;
+  inset:0;
+  z-index:-3;
+  transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .35s ease;
+}
+.chapter-card-v7-content{
+  position:absolute;
+  inset:0;
+  padding:14px 16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.chapter-card-v7-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.chapter-no-v7{
+  font-family:Georgia,serif;
+  font-size:14px;
+  font-weight:700;
+  color:#62756a;
+}
+.chapter-open-v7{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  padding:6px 9px;
+  border-radius:999px;
+  background:rgba(255,255,255,.74);
+  border:1px solid rgba(186,202,190,.78);
+  color:#3f5b4d;
+  font-size:12px;
+  font-weight:600;
+  backdrop-filter:blur(7px);
+}
+.chapter-open-v7 b{
+  font-size:15px;
+  line-height:1;
+  font-weight:500;
+  transition:transform .18s ease;
+}
+.chapter-card-v7:hover .chapter-open-v7 b{transform:translate(3px,-3px)}
+.chapter-card-v7-main h2{
+  font-family:Georgia,"Songti SC","STSong",serif;
+  font-size:24px;
+  margin:0 0 8px;
+}
+.chapter-card-v7-main h2 em{
+  font-size:.8em;
+  font-style:normal;
+  margin-left:3px;
+}
+.chapter-card-v7-main p{
+  font-size:12px;
+  color:#66746d;
+  margin-top:8px;
+}
+
+/* Experience fills the card with a visual timeline backdrop */
+.experience-bg{
+  background:
+    radial-gradient(circle at 88% 18%,rgba(255,255,255,.9),transparent 28%),
+    linear-gradient(135deg,#dfe9e2 0%,#edf2ee 52%,#d5e2d9 100%);
+}
+.experience-bg:after{
+  content:"READY   →   BUILD   →   CLOSE";
+  position:absolute;
+  left:18px;
+  right:18px;
+  top:50%;
+  transform:translateY(-50%);
+  color:rgba(43,81,61,.055);
+  font:800 28px ui-monospace,monospace;
+  letter-spacing:.03em;
+  white-space:nowrap;
+}
+.flow-v7{
+  height:43px;
+  display:grid;
+  grid-template-columns:auto 1fr auto 1fr auto;
+  gap:6px;
+  align-items:center;
+}
+.flow-v7 span{
+  padding:5px 7px;
+  border:1px solid rgba(161,184,168,.75);
+  border-radius:5px;
+  background:rgba(255,255,255,.63);
+  font-size:10px;
+  text-align:center;
+}
+.flow-v7 i{height:1px;background:#a9bdb0}
+
+/* Project: visual technical field, no empty dead space */
+.project-bg{
+  background:
+    radial-gradient(circle at 80% 32%,rgba(57,94,73,.16),transparent 28%),
+    repeating-linear-gradient(0deg,rgba(72,96,80,.055) 0 1px,transparent 1px 24px),
+    repeating-linear-gradient(90deg,rgba(72,96,80,.045) 0 1px,transparent 1px 38px),
+    linear-gradient(135deg,#eef2ee,#dde8e0);
+}
+.project-bg:after{
+  content:"";
+  position:absolute;
+  left:12%;
+  right:8%;
+  top:48%;
+  height:2px;
+  background:linear-gradient(90deg,transparent,#6c8b79 18%,#345e49 52%,#7f9d8c 82%,transparent);
+  transform:skewY(-7deg);
+  opacity:.42;
+}
+.metric-v7{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  height:43px;
+}
+.metric-v7 span{font-family:Georgia,serif;font-size:18px;color:#74847b}
+.metric-v7 b{font-weight:400;color:#92a098}
+.metric-v7 strong{font-family:Georgia,serif;font-size:32px;color:var(--accent);font-weight:500}
+
+/* Life is a full-bleed image */
+.life-bg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 45%;
+  display:block;
+  transition:transform .6s cubic-bezier(.2,.7,.2,1);
+}
+.life-card-v7:hover .life-bg img{transform:scale(1.045)}
+.chapter-card-v7-shade{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:linear-gradient(180deg,rgba(10,17,13,.08) 0%,rgba(10,17,13,.14) 38%,rgba(10,17,13,.72) 100%);
+}
+.on-photo-v7{color:white}
+.on-photo-v7 .chapter-no-v7{color:rgba(255,255,255,.92)}
+.on-photo-v7 .chapter-card-v7-main p{color:rgba(255,255,255,.82)}
+.dark-pill{
+  color:white;
+  background:rgba(17,45,33,.5);
+  border-color:rgba(255,255,255,.25);
+}
+
+/* AI uses a full dark visual instead of an empty box */
+.ai-bg{
+  background:
+    radial-gradient(circle at 85% 18%,rgba(125,182,151,.22),transparent 30%),
+    radial-gradient(circle at 20% 90%,rgba(119,166,142,.13),transparent 33%),
+    linear-gradient(135deg,#123a2c,#1a513d);
+}
+.ai-bg:after{
+  content:"AI";
+  position:absolute;
+  right:14px;
+  bottom:-20px;
+  font:800 110px Georgia,serif;
+  color:rgba(255,255,255,.035);
+}
+.ai-content-v7{color:white}
+.ai-content-v7 .chapter-no-v7{color:rgba(255,255,255,.72)}
+.ai-content-v7 .chapter-card-v7-main p{color:rgba(255,255,255,.72)}
+.ai-flow-v7{
+  height:43px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr;
+  gap:6px;
+  align-items:center;
+}
+.ai-flow-v7 span{
+  padding:5px 5px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:5px;
+  text-align:center;
+  font-size:10px;
+  background:rgba(255,255,255,.035);
+}
+.ai-flow-v7 b{font-weight:400;color:rgba(255,255,255,.46)}
+
+/* entrance motion: hierarchy first, interaction second */
+.reveal{
+  opacity:0;
+  transform:translateY(12px);
+  animation:home-reveal .58s cubic-bezier(.22,.72,.25,1) forwards;
+}
+.r1{animation-delay:.04s}.r2{animation-delay:.12s}.r3{animation-delay:.20s}
+.r4{animation-delay:.28s}.r5{animation-delay:.34s}.r6{animation-delay:.40s}
+@keyframes home-reveal{
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* subtle nav feedback */
+.home-mode .navlinks a:not(.resume-btn){
+  position:relative;
+  transition:color .18s ease;
+}
+.home-mode .navlinks a:not(.resume-btn):after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-7px;
+  height:1px;
+  background:var(--accent);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .2s ease;
+}
+.home-mode .navlinks a:not(.resume-btn):hover:after{transform:scaleX(1)}
+
+@media(max-width:1050px){
+  .home-grid-v7{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:auto;
+    align-content:start;
+  }
+  .hero-v7{grid-column:1/-1;grid-row:auto;min-height:220px}
+  .experience-card-v7,.project-card-v7,.life-card-v7,.ai-card-v7{
+    grid-column:auto;grid-row:auto;height:205px;
+  }
+}
+@media(max-width:720px){
+  .home-grid-v7{grid-template-columns:1fr;padding-top:16px}
+  .hero-v7{grid-template-columns:1fr;gap:16px}
+  .hero-v7-photo{width:100%;height:auto;aspect-ratio:4/5}
+  .hero-v7-copy h1{font-size:36px}
+  .hero-v7-line{font-size:18px}
+  .chapter-card-v7{height:195px}
+}
+@media(prefers-reduced-motion:reduce){
+  .wave,.reveal{animation:none!important}
+  .reveal{opacity:1;transform:none}
+  .chapter-card-v7,.chapter-card-v7-bg,.hero-v7-photo img,.life-bg img,.chapter-open-v7 b{transition:none!important}
+}
