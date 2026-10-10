@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a0d0c"/><stop offset="1" stop-color="#111817"/></linearGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#25312d" stroke-width="1"/></pattern>
+</defs>
+<rect width="960" height="520" rx="28" fill="url(#bg)"/><rect width="960" height="520" rx="28" fill="url(#grid)" opacity=".7"/>
+<g font-family="monospace" font-size="18" fill="#8ea79c"><text x="40" y="42">SPWM // SIMULINK WAVEFORM VIEW</text><text x="790" y="42">50 Hz</text></g>
+<g transform="translate(40 80)">
+  <rect width="880" height="82" rx="10" fill="#0d1311" stroke="#2a3833"/>
+  <path d="M0 42 C35 8 70 8 105 42 S175 76 210 42 S280 8 315 42 S385 76 420 42 S490 8 525 42 S595 76 630 42 S700 8 735 42 S805 76 840 42 S875 8 880 42" fill="none" stroke="#d7b866" stroke-width="3"/>
+  <text x="14" y="24" font-family="monospace" font-size="14" fill="#72857c">carrier / reference</text>
+</g>
+<g transform="translate(40 178)">
+  <rect width="880" height="82" rx="10" fill="#0d1311" stroke="#2a3833"/>
+  <path d="M0 64V16H22V64H44V16H66V64H90V16H115V64H140V16H166V64H194V16H220V64H248V16H278V64H307V16H336V64H366V16H398V64H430V16H463V64H496V16H530V64H565V16H600V64H636V16H672V64H709V16H747V64H786V16H826V64H868V16H880" fill="none" stroke="#6dd1ff" stroke-width="3"/>
+  <text x="14" y="24" font-family="monospace" font-size="14" fill="#72857c">gate pulse</text>
+</g>
+<g transform="translate(40 276)">
+  <rect width="880" height="82" rx="10" fill="#0d1311" stroke="#2a3833"/>
+  <path d="M0 56 L55 54 L95 28 L135 60 L180 51 L220 26 L260 58 L305 53 L345 29 L385 59 L430 51 L470 25 L510 57 L555 52 L595 29 L635 60 L680 50 L720 25 L760 57 L805 51 L845 28 L880 56" fill="none" stroke="#8be0a9" stroke-width="3"/>
+  <text x="14" y="24" font-family="monospace" font-size="14" fill="#72857c">output voltage</text>
+</g>
+<g transform="translate(40 374)">
+  <rect width="880" height="82" rx="10" fill="#0d1311" stroke="#2a3833"/>
+  <path d="M0 58 C60 40 95 35 145 43 S230 63 280 45 S370 31 420 43 S510 62 560 45 S650 31 700 44 S790 62 880 39" fill="none" stroke="#e889ac" stroke-width="3"/>
+  <text x="14" y="24" font-family="monospace" font-size="14" fill="#72857c">load current</text>
+</g>
+</svg>
