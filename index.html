@@ -105,14 +105,22 @@ a{color:inherit;text-decoration:none}
 .project .click,.life .click,.ai .click{
   background:rgba(15,31,23,.56);border-color:rgba(255,255,255,.18);color:#fff
 }
-.experience{grid-column:3;grid-row:2;background:linear-gradient(145deg,#eef4ef,#e5eee8)}
-.experience:after{
-  content:"READY  →  BUILD  →  CLOSE";position:absolute;right:-24px;top:52%;
-  font:700 27px Georgia,serif;color:rgba(38,82,60,.055);white-space:nowrap
+.experience{
+  grid-column:3;grid-row:2;color:#fff;
+  background-image:
+    linear-gradient(180deg,rgba(8,20,15,.02) 0%,rgba(8,20,15,.18) 46%,rgba(8,20,15,.62) 100%),
+    url("assets/experience-home.jpg");
+  background-size:cover;background-position:center 46%;border-color:#d4ded8
 }
+.experience:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.03),transparent 44%);pointer-events:none}
 .flow{display:grid;grid-template-columns:auto 1fr auto 1fr auto;gap:7px;align-items:center;margin:12px 0}
 .flow span{padding:6px 8px;border:1px solid #c8d4cb;background:rgba(255,255,255,.72);border-radius:7px;font-size:10px}
 .flow i{height:1px;background:#afc0b5}
+.experience .no,.experience p{color:rgba(255,255,255,.94)}
+.experience h2{color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.18)}
+.experience .click{background:rgba(16,39,29,.50);border-color:rgba(255,255,255,.22);color:#fff}
+.experience .flow span{background:rgba(255,255,255,.84);border-color:rgba(255,255,255,.48);color:#27483a}
+.experience .flow i{background:rgba(255,255,255,.48)}
 .ai{grid-column:2;grid-row:3;color:#fff;background:radial-gradient(circle at 80% 18%,rgba(98,170,136,.24),transparent 32%),linear-gradient(135deg,#0f4d39,#0a392a)}
 .ai:after{content:"AI";position:absolute;right:8px;bottom:-16px;font:700 100px Georgia,serif;color:rgba(255,255,255,.045)}
 .ai .no,.ai p{color:rgba(255,255,255,.85)}
@@ -190,7 +198,7 @@ a{color:inherit;text-decoration:none}
       <div class="kicker">Electrical Engineering · Project Execution · AI Workflow</div>
       <h1>Hi, 我是陈佳路。<span class="wave" aria-label="挥手">👋</span></h1>
       <p class="school">华东交通大学电气工程及其自动化本科生。</p>
-      <p class="intro-line">在学校，我主要做电气与控制仿真；到工厂实习后，我开始跟着项目、工单、物料和现场节奏一起跑。</p>
+      <p class="intro-line">我喜欢认真做事，也喜欢认真生活。</p>
       <div class="meta">
         <span>2027 Graduate</span><span>SMT / NPI</span><span>MATLAB / Simulink</span>
       </div>
