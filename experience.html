@@ -98,12 +98,60 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 .portfolio-home-link:hover{transform:translateY(-1px);border-color:#bdd3cf;background:#f4f9f7}
 .mobile-home-link{display:none;position:fixed;z-index:30;left:14px;top:14px;padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.94);border:1px solid #d9e5e2;color:#21485a;font-size:12px;font-weight:800;box-shadow:0 8px 22px rgba(18,42,55,.12);backdrop-filter:blur(8px)}
 @media(max-width:900px){.mobile-home-link{display:inline-flex}.sidebar .portfolio-home-link{display:none}.main{padding-top:68px}}
+
+/* Main portfolio header — kept consistent with homepage */
+.main-site-header{
+  position:sticky;top:0;z-index:100;background:rgba(247,246,242,.94);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid #e5e9e5;
+}
+.main-site-nav{
+  width:min(1320px,calc(100vw - 56px));margin:0 auto;
+  min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.main-site-brand{
+  font-family:Georgia,"Songti SC",serif;font-size:21px;font-weight:700;
+  color:#1d2621;text-decoration:none;
+}
+.main-site-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.main-site-links a{
+  padding:9px 11px;border-radius:999px;font-size:14px;color:#526057;
+  transition:.2s ease;text-decoration:none;
+}
+.main-site-links a:hover{background:#edf2ee;color:#173e2f}
+.main-site-links .contact-nav{border:1px solid #d8e1da}
+.main-site-links .resume-btn{
+  background:#104b38!important;color:#fff!important;padding:10px 17px!important
+}
+/* The portfolio sidebar now sits below the global header. */
+.sidebar{top:76px!important;height:calc(100vh - 76px)!important}
+@media(max-width:760px){
+  .main-site-nav{width:min(100% - 28px,1320px);min-height:68px;gap:12px}
+  .main-site-brand{font-size:20px;white-space:nowrap}
+  .main-site-links{gap:3px;justify-content:flex-end}
+  .main-site-links a{font-size:13px;padding:8px 8px}
+  .main-site-links .resume-btn{padding:9px 13px!important}
+  .sidebar{top:68px!important;height:calc(100vh - 68px)!important}
+}
+
 </style>
 </head>
 <body>
-<a class="mobile-home-link" href="index.html">← 返回主页</a>
+<header class="main-site-header">
+  <div class="main-site-nav">
+    <a class="main-site-brand" href="index.html">陈佳路</a>
+    <nav class="main-site-links" aria-label="个人作品集主导航">
+      <a href="rectifier-case.html">项目</a>
+      <a href="experience.html">经历</a>
+      <a href="ai.html">AI</a>
+      <a href="life.html">生活</a>
+      <a class="contact-nav" href="contact.html">联系我</a>
+      <a class="resume-btn" href="resume.html">简历</a>
+    </nav>
+  </div>
+</header>
 <div class="layout">
-<aside class="sidebar"><div class="mark"><div class="brand-badge">CJL</div><div><div class="title">Work Portfolio</div><small>ENGINEERING / OPS</small></div></div><a class="portfolio-home-link" href="index.html">← 返回个人主页</a><div class="side-kicker">CONTENTS / 目录</div><nav aria-label="华勤项目管理作品集目录" class="toc">
+<aside class="sidebar"><div class="mark"><div class="brand-badge">CJL</div><div><div class="title">Work Portfolio</div><small>ENGINEERING / OPS</small></div></div><div class="side-kicker">CONTENTS / 目录</div><nav aria-label="华勤项目管理作品集目录" class="toc">
 <a class="active" href="#overview"><span class="num">01</span><span>经历与项目概况</span></a>
 <a href="#timing"><span class="num">02</span><span>生产时间分析与复盘</span></a>
 <a href="#data"><span class="num">03</span><span>数据分析与可视化</span></a>
