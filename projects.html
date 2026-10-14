@@ -45,15 +45,22 @@
   frame.addEventListener("load",function(){
     syncHash();
     try{
-      // The project's original "Back to Projects" link should return to the site,
-      // not nest another Projects wrapper inside the iframe.
-      frame.contentDocument.addEventListener("click",function(event){
+      const doc=frame.contentDocument;
+      // If the original project has its own old site header, suppress only
+      // that duplicated navigation. Keep all original project content untouched.
+      const style=doc.createElement("style");
+      style.textContent=".site-header,.main-site-header,.portfolio-header{display:none!important}";
+      doc.head.appendChild(style);
+      doc.addEventListener("click",function(event){
         const link=event.target.closest("a[href]");
         if(!link)return;
-        const url=new URL(link.href,frame.contentDocument.baseURI);
-        if(url.origin===location.origin && url.pathname.endsWith("/projects.html")){
+        const url=new URL(link.href,doc.baseURI);
+        if(url.origin!==location.origin)return;
+        const leaf=url.pathname.split("/").pop();
+        const pages=["index.html","projects.html","experience.html","ai.html","life.html","contact.html","resume.html"];
+        if(pages.includes(leaf)){
           event.preventDefault();
-          window.location.href="index.html";
+          window.location.href=(leaf==="projects.html"?"index.html":leaf)+url.hash;
         }
       });
     }catch(e){}
