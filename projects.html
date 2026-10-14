@@ -1,1 +1,65 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>项目｜陈佳路</title><meta http-equiv="refresh" content="0; url=rectifier-case.html?v=20261008d"><script>location.replace('rectifier-case.html?v=20261008d');</script></head><body><p>正在进入项目页面… <a href="rectifier-case.html?v=20261008d">点击这里</a></p></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="单相桥式全控整流电路：MATLAB/Simulink建模、参数扫描与有源逆变验证。">
+<title>项目｜陈佳路</title>
+<link rel="stylesheet" href="shared-header.css?v=20261014-unified2">
+<style>
+  html,body{height:100%;margin:0;background:#101516;overflow:hidden}
+  .project-viewer{display:block;border:0;width:100%;height:calc(100vh - var(--portfolio-header-height));height:calc(100dvh - var(--portfolio-header-height));background:#101516}
+  .fallback{color:#f6f5f1;text-align:center;font:14px/1.7 "Segoe UI",sans-serif;margin:0;padding:8px}
+  .fallback a{color:#ffbd83}
+  @media print{.portfolio-header{display:none}.project-viewer{height:100vh}}
+</style>
+</head>
+<body>
+<header class="portfolio-header">
+  <div class="portfolio-bar">
+    <div class="portfolio-identity">
+      <a class="portfolio-brand" href="index.html" aria-label="陈佳路，返回主页">陈佳路</a>
+      <a class="portfolio-home" href="index.html">⌂ 首页</a>
+    </div>
+    <nav class="portfolio-menu" aria-label="个人网站主导航">
+      <a class="portfolio-link portfolio-active" href="projects.html" aria-current="page">项目</a>
+      <a class="portfolio-link" href="experience.html">实习</a>
+      <a class="portfolio-link" href="ai.html">AI</a>
+      <a class="portfolio-link" href="life.html">生活</a>
+      <a class="portfolio-link portfolio-contact" href="contact.html">联系我</a>
+      <a class="portfolio-link portfolio-resume" href="resume.html">简历</a>
+    </nav>
+  </div>
+</header>
+<iframe id="project-viewer" class="project-viewer" src="rectifier-case.html" title="单相桥式全控整流电路完整项目作品集" loading="eager" referrerpolicy="same-origin"></iframe>
+<noscript><p class="fallback">页面未显示？<a href="rectifier-case.html">打开完整项目页面 ↗</a></p></noscript>
+<script>
+(function(){
+  const frame=document.getElementById("project-viewer");
+  function syncHash(){
+    const h=window.location.hash;
+    if(h && frame.contentWindow){
+      try {frame.contentWindow.location.hash=h;}catch(e){}
+    }
+  }
+  frame.addEventListener("load",function(){
+    syncHash();
+    try{
+      // The project's original "Back to Projects" link should return to the site,
+      // not nest another Projects wrapper inside the iframe.
+      frame.contentDocument.addEventListener("click",function(event){
+        const link=event.target.closest("a[href]");
+        if(!link)return;
+        const url=new URL(link.href,frame.contentDocument.baseURI);
+        if(url.origin===location.origin && url.pathname.endsWith("/projects.html")){
+          event.preventDefault();
+          window.location.href="index.html";
+        }
+      });
+    }catch(e){}
+  });
+  window.addEventListener("hashchange",syncHash);
+})();
+</script>
+</body>
+</html>
