@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>实习经历｜陈佳路</title>
-<meta content="SMT NPI 项目管理面试速览：三项目职责、Excel 试产清单、物料与节点跟进、异常协调可视化" name="description"/>
+<meta content="消费电子制造项目管理 · 生产时间复盘 · 数据分析与可视化" name="description"/>
 <style>
 :root{--navy:#0e253b;--night:#102c43;--ink:#152c3e;--muted:#596c76;--orange:#ef824e;--rose:#e66c64;--teal:#2b9b9d;--blue:#508abe;--gold:#edb752;--mint:#dbf1ea;--sand:#fbf7ef;--paper:#fffefd;--line:#dfe7e7;--shadow:0 24px 60px rgba(29,48,65,.055)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:36px}body{margin:0;background:#f3f6f5;color:var(--ink);font-family:Inter,"Segoe UI","Noto Sans CJK SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}::selection{background:#d5f3ed}
@@ -179,84 +179,52 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 @media(max-width:1080px){.hq-aug-report .hq-aug-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.hq-aug-report .hq-aug-grid{grid-template-columns:1fr}.hq-aug-plot{max-width:290px}.hq-aug-report .hq-aug-card{padding:20px}}
 
-</style>
 
-<style id="interview-overview-style">
-/* Interview-first, single-page overview. All historical detail remains in an optional disclosure. */
-.internship-page .layout{display:block;max-width:1480px;margin:auto;min-height:0}
-.internship-page .sidebar{display:none!important}
-.internship-page .main{padding:20px clamp(20px,3vw,48px) 70px!important}
-.internship-page .container{max-width:1360px!important}
-.internship-page{background:#f4f7f5}
-.iv-board{font-family:Inter,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#183a3c}
-.iv-board *{box-sizing:border-box}
-.iv-board .iv-hero{display:grid;grid-template-columns:minmax(0,1fr) 414px;align-items:center;gap:30px;min-height:173px;background:linear-gradient(120deg,#103d34,#14374a);padding:24px 32px;border-radius:22px;color:white;position:relative;overflow:hidden;box-shadow:0 15px 38px rgba(15,53,58,.13);margin-bottom:16px}
-.iv-board .iv-hero::after{content:"";position:absolute;width:335px;height:335px;right:-125px;top:-180px;border:1px solid rgba(255,255,255,.17);border-radius:50%;pointer-events:none}
-.iv-board .iv-kicker{font-size:10px;letter-spacing:.18em;font-weight:850;color:#82d4ba;white-space:normal}
-.iv-board .iv-hero h1{margin:9px 0 9px;font-size:clamp(31px,3.2vw,46px);line-height:1.17;letter-spacing:-.04em}
-.iv-board .iv-hero h1 b{color:#f4ba8a}
-.iv-board .iv-intro{color:#d1e2e1;line-height:1.5;margin:0;font-size:13px}
-.iv-board .iv-number-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;position:relative;z-index:1}
-.iv-board .iv-number{border:1px solid #ffffff35;background:#ffffff12;border-radius:13px;padding:15px 10px 14px;text-align:center}
-.iv-board .iv-number strong{font-size:31px;font-weight:850;letter-spacing:-1px;display:block;line-height:1.1;color:#ffca9b}
-.iv-board .iv-number span{font-size:11px;display:block;margin-top:5px;color:#d5e9e4}
-.iv-board .iv-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);grid-template-rows:auto auto;gap:15px}
-.iv-board .iv-card{min-width:0;background:#fff;border:1px solid #dce7e4;border-radius:19px;padding:22px 25px;box-shadow:0 7px 24px rgba(27,68,67,.045)}
-.iv-board .iv-cardhead{display:flex;justify-content:space-between;gap:16px;align-items:start;margin-bottom:19px}
-.iv-board .iv-suptitle{font-size:10px;font-weight:850;color:#3c9784;letter-spacing:.12em}
-.iv-board h2{margin:5px 0 0;font-size:21px;letter-spacing:-.035em;color:#173a3b}
-.iv-board .iv-flag{font-size:10px;color:#768b8c;background:#f0f6f3;border:1px solid #dfeae6;border-radius:40px;padding:7px 9px;white-space:nowrap}
-.iv-board .iv-plot{display:grid;grid-template-columns:1fr;gap:9px}
-.iv-board .iv-barrow{display:grid;grid-template-columns:61px 1fr 28px;align-items:center;gap:12px}
-.iv-board .iv-barlabel{font-size:11px;font-weight:750;color:#607678}
-.iv-board .iv-bartrack{height:14px;background:#f0f4f3;border-radius:6px;overflow:hidden}
-.iv-board .iv-barfill{height:100%;border-radius:6px;display:block}
-.iv-board .iv-barvalue{font-size:12px;font-weight:850;color:#294b4a;text-align:right;font-variant-numeric:tabular-nums}
-.iv-board .iv-barsub{margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;color:#829491;font-size:10px;line-height:1.5}
-.iv-board .iv-barsub strong{color:#2c655a;font-size:11px}
-.iv-board .iv-tasks{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.iv-board .iv-task{min-height:77px;padding:12px 13px;border-radius:12px;border:1px solid #e1e9e7;background:#fbfcfb;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
-.iv-board .iv-taskhead{display:flex;gap:9px;justify-content:space-between;align-items:center}
-.iv-board .iv-taskhead b{font-size:12px;line-height:1.35;color:#2b4b4b}
-.iv-board .iv-label{display:inline-flex;gap:5px;align-items:center;font-size:10px;color:#577c75}
-.iv-board .iv-dot{height:6px;width:6px;border-radius:50%;background:#2d987f}
-.iv-board .iv-dot.amber{background:#e4a153}.iv-board .iv-dot.blue{background:#5b8fa5}
-.iv-board .iv-task small{font-size:10px;color:#8a9998;line-height:1.3}
-.iv-board .iv-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:11px 0 18px}
-.iv-board .iv-step{position:relative;min-height:83px;padding:13px 9px;text-align:center;display:flex;flex-direction:column;justify-content:center;border-radius:12px;background:#f0f7f4;border:1px solid #dbece6}
-.iv-board .iv-step:not(:last-child)::after{content:"›";position:absolute;right:-12px;top:27px;z-index:2;color:#369b88;font-size:24px;font-weight:800}
-.iv-board .iv-step b{font-size:11px;line-height:1.35;color:#23574c}
-.iv-board .iv-step span{font-size:10px;color:#75948a;margin-top:7px}
-.iv-board .iv-riskline{display:flex;align-items:center;gap:13px;padding-top:10px;border-top:1px solid #ebefed}
-.iv-board .iv-riskline strong{font-size:11px;color:#586f71;white-space:nowrap}
-.iv-board .iv-risksegments{display:flex;height:11px;flex:1;overflow:hidden;border-radius:5px}
-.iv-board .iv-risksegments i:nth-child(1){width:50%;background:#db8468}
-.iv-board .iv-risksegments i:nth-child(2){width:16.667%;background:#e1b666}
-.iv-board .iv-risksegments i:nth-child(3){width:33.333%;background:#78b8af}
-.iv-board .iv-riskcaption{font-size:10px;color:#869791;white-space:nowrap}
-.iv-board .iv-projects{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:15px 0}
-.iv-board .iv-project{border:1px solid #e1e9e5;background:#f9fbfa;border-radius:12px;min-height:92px;padding:14px 12px}
-.iv-board .iv-project .iv-projectnum{font-size:10px;letter-spacing:.13em;font-weight:850;color:#84a297}
-.iv-board .iv-project b{display:block;font-size:13px;color:#234743;margin-top:9px;line-height:1.3}
-.iv-board .iv-project span{font-size:10px;color:#66867e;display:block;margin-top:6px}
-.iv-board .iv-tools{border-top:1px solid #edf1ee;padding-top:12px;display:flex;gap:6px;flex-wrap:wrap}
-.iv-board .iv-tools span{display:inline-block;padding:5px 8px;background:#edf5f1;border-radius:7px;color:#47786d;font-size:10px;font-weight:720}
-.iv-board .iv-footnote{margin-top:11px;font-size:10px;color:#80928e;line-height:1.55;display:flex;justify-content:space-between;gap:15px}
-.iv-board .iv-footnote b{color:#526e67}
-.iv-board .iv-brief{display:flex;justify-content:space-between;gap:9px;align-items:center;font-size:11px;color:#6a857e;margin-top:12px}
-.iv-board .iv-brief strong{color:#34685e}
-.iv-archive{margin-top:25px;border-top:1px solid #d5e2dd;padding-top:20px}
-.iv-archive>summary{cursor:pointer;list-style:none;border:1px solid #dae6e0;border-radius:15px;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;background:#eaf2ed;color:#315e53;font-size:15px;font-weight:800}
-.iv-archive>summary::-webkit-details-marker{display:none}
-.iv-archive>summary::after{content:"＋";font-size:21px;color:#518a7a}
-.iv-archive[open]>summary{margin-bottom:35px}
-.iv-archive[open]>summary::after{content:"−"}
-.iv-archive>.hero{margin-top:20px}
-.iv-board .iv-compact-note{font-size:10px;color:#8b9e9a;margin:8px 0 0}
-@media(max-width:1050px){.iv-board .iv-hero{grid-template-columns:1fr 350px;gap:15px}.iv-board .iv-grid{grid-template-columns:1fr}.iv-board .iv-card{padding:21px 24px}}
-@media(max-width:700px){.internship-page .main{padding:13px 12px 45px!important}.iv-board .iv-hero{grid-template-columns:1fr;padding:24px 22px;gap:18px}.iv-board .iv-number{padding:12px 7px}.iv-board .iv-number strong{font-size:28px}.iv-board .iv-card{padding:19px 17px}.iv-board .iv-cardhead{flex-wrap:wrap;gap:9px}.iv-board .iv-tasks{grid-template-columns:1fr 1fr}.iv-board .iv-flow{grid-template-columns:repeat(2,1fr)}.iv-board .iv-step:nth-child(2)::after{display:none}.iv-board .iv-projects{grid-template-columns:1fr 1fr}.iv-board .iv-footnote{display:block}.iv-board .iv-footnote span{display:block;margin-top:4px}}
-@media(max-width:420px){.iv-board .iv-task{min-height:90px}.iv-board .iv-taskhead b{font-size:11px}.iv-board .iv-projects{grid-template-columns:1fr 1fr}.iv-board .iv-riskline{flex-wrap:wrap}}
-@media print{.portfolio-header{display:none}.iv-board .iv-hero,.iv-board .iv-card{break-inside:avoid}.iv-archive{display:none}.internship-page .main{padding:0!important}}
+/* 08/09 · Excel-based readiness and follow-up (public, anonymized visual extract) */
+.ps-section{scroll-margin-top:calc(var(--portfolio-header-height,76px) + 20px);margin-bottom:62px}
+.ps-heading{display:flex;align-items:start;justify-content:space-between;gap:18px;margin-bottom:17px}
+.ps-heading h2{font-size:clamp(27px,3.1vw,38px);margin:6px 0 0;letter-spacing:-.035em;color:#173e48}
+.ps-eyebrow{color:#268f87;font-weight:850;font-size:11px;letter-spacing:1.55px}
+.ps-note{font-size:11px;line-height:1.6;color:#8a9a9d}
+.ps-pill{display:inline-flex;border:1px solid #dae8e3;background:#eff8f4;border-radius:50px;padding:8px 12px;font-size:11px;font-weight:750;color:#47776e;white-space:nowrap}
+.ps-surface{border:1px solid #dbe6e4;border-radius:21px;background:#fff;box-shadow:0 12px 28px rgba(22,55,62,.04);padding:23px 26px;min-width:0}
+.ps-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:15px}
+.ps-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:19px}
+.ps-head h3{margin:0;font-size:19px;letter-spacing:-.01em}
+.ps-caption{font-size:11px;color:#819299}
+.ps-bars{display:grid;gap:13px}
+.ps-bar{display:grid;grid-template-columns:58px minmax(0,1fr) 35px;gap:10px;align-items:center}
+.ps-bar-label{font-size:12px;font-weight:750;color:#46616b}
+.ps-track{background:#eff3f2;border-radius:7px;height:14px;overflow:hidden}
+.ps-fill{height:100%;display:block;background:#4f9a94;border-radius:7px}
+.ps-fill.orange{background:#eda574}.ps-fill.blue{background:#598ba5}.ps-fill.mint{background:#87b5a9}
+.ps-value{font-size:12px;font-weight:850;text-align:right;color:#2b5360}
+.ps-total{padding-top:12px;margin-top:17px;border-top:1px solid #e4eded;display:flex;align-items:baseline;gap:10px}
+.ps-total b{font-size:30px;color:#183c4d}.ps-total span{font-size:11px;color:#71858d}
+.ps-table{width:100%;border-collapse:collapse;table-layout:auto}
+.ps-table th{font-size:11px;white-space:nowrap;color:#769099;font-weight:800;text-align:left;background:#f3f7f5;padding:11px 12px}
+.ps-table td{font-size:12px;line-height:1.65;color:#45606b;padding:11px 12px;border-top:1px solid #e9eeec;vertical-align:middle}
+.ps-table tr:hover td{background:#fafdfb}
+.ps-table td:first-child{font-weight:780;color:#25434f}
+.ps-graphic{display:flex;gap:4px;margin:0 0 18px;height:18px;overflow:hidden;border-radius:8px}
+.ps-graphic span{display:block;height:100%}
+.ps-brief{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:17px}
+.ps-brief-cell{border:1px solid #dcebe7;border-radius:12px;background:#f3f9f6;padding:17px 10px;min-width:0;text-align:center;position:relative}
+.ps-brief-cell:not(:last-child)::after{content:'›';position:absolute;right:-13px;top:33%;font-size:23px;color:#609f96;z-index:2}
+.ps-brief-cell b{font-size:12px;color:#265b55;display:block}
+.ps-brief-cell small{display:block;margin-top:6px;color:#78918c;font-size:10px;line-height:1.4}
+.ps-mini-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}
+.ps-mini-tags span{font-size:11px;font-weight:700;border-radius:7px;padding:6px 9px;color:#4b7f76;background:#eef6f3}
+.ps-disclosure{font-size:11px;color:#89999a;line-height:1.8;margin-top:16px}
+.ps-todo-table{width:100%;border-collapse:collapse}
+.ps-todo-table th{text-align:left;font-size:11px;color:#79949a;background:#f2f7f5;padding:13px 15px;font-weight:800}
+.ps-todo-table td{padding:15px;border-top:1px solid #e5edeb;font-size:13px;color:#48606c;line-height:1.65}
+.ps-todo-table td:first-child{font-weight:800;color:#254b55}
+.ps-id{font-size:11px;color:#9aadaf;font-weight:800;margin-right:7px}
+.ps-foot{margin-top:16px;padding:12px 15px;border-radius:10px;background:#f2f8f5;color:#537b73;font-size:11px}
+@media(max-width:970px){.ps-grid{grid-template-columns:1fr}.ps-brief{grid-template-columns:repeat(2,1fr)}.ps-brief-cell:nth-child(2)::after{display:none}}
+@media(max-width:620px){.ps-heading{flex-wrap:wrap}.ps-surface{padding:17px}.ps-table th,.ps-table td{font-size:11px;padding:10px 7px}.ps-todo-table td,.ps-todo-table th{padding:10px 7px;font-size:11px}.ps-brief-cell{padding:13px 6px}}
+
 </style>
 <link rel="stylesheet" href="shared-header.css?v=20261014-unified2">
 </head>
@@ -279,7 +247,6 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 </header>
 <div class="layout">
 <aside class="sidebar"><div class="mark"><div class="brand-badge">CJL</div><div><div class="title">Work Portfolio</div><small>ENGINEERING / OPS</small></div></div><div class="side-kicker">CONTENTS / 目录</div><nav aria-label="华勤项目管理作品集目录" class="toc">
-<a class="active" href="#interview"><span class="num">00</span><span>面试速览</span></a>
 <a class="active" href="#overview"><span class="num">01</span><span>经历与项目概况</span></a>
 <a href="#timing"><span class="num">02</span><span>生产时间分析与复盘</span></a>
 <a href="#data"><span class="num">03</span><span>数据分析与可视化</span></a>
@@ -287,77 +254,18 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 <a href="#incident"><span class="num">05</span><span>异常协调与闭环</span></a>
 <a href="#npi-risk-showcase"><span class="num">06</span><span>研发问题与风险管理</span></a>
 <a href="#gantt-showcase"><span class="num">07</span><span>甘特图延伸探索</span></a>
+<a href="#checklist-visual"><span class="num">08</span><span>试产准备清单</span></a>
+<a href="#todo-visual"><span class="num">09</span><span>Excel 跟进事项</span></a>
 </nav><div class="side-footer"><div class="tagline">工程项目实践 · 数据复盘 · 工具方法</div>真实项目数据脱敏呈现。<br/>本模块为个人作品展示，不代表公司官方立场。</div></aside>
 <main class="main"><div class="container">
-
-<section class="iv-board" id="interview" aria-label="面试速览：试产项目管理实践">
-  <div class="iv-hero">
-    <div>
-      <div class="iv-kicker">NPI / SMT PROJECT OPERATIONS · 面试速览</div>
-      <h1>把试产准备，变成<b>可执行的推进</b></h1>
-      <p class="iv-intro">准备检查 · 物料与节点跟进 · 跨部门异常协调</p>
-    </div>
-    <div class="iv-number-row" aria-label="个人实习项目职责概况">
-      <div class="iv-number"><strong>3</strong><span>参与项目</span></div>
-      <div class="iv-number"><strong>2</strong><span>独立负责 SMT 侧推进</span></div>
-      <div class="iv-number"><strong>1</strong><span>辅助导师</span></div>
-    </div>
-  </div>
-  <div class="iv-grid">
-    <div class="iv-card" aria-label="试产准备清单类别分布图">
-      <div class="iv-cardhead"><div><span class="iv-suptitle">01 · CHECKLIST</span><h2>试产准备清单</h2></div><span class="iv-flag">Excel 原始结构整理</span></div>
-      <div class="iv-plot" role="img" aria-label="团队试产准备清单68项，其中人员8项、设备5项、物料22项、方法和工艺21项、环境5项、其他7项">
-        <div class="iv-barrow"><span class="iv-barlabel">人</span><div class="iv-bartrack"><span class="iv-barfill" style="width:36.36%;background:#80b9a9"></span></div><b class="iv-barvalue">8</b></div>
-        <div class="iv-barrow"><span class="iv-barlabel">机</span><div class="iv-bartrack"><span class="iv-barfill" style="width:22.73%;background:#80b9a9"></span></div><b class="iv-barvalue">5</b></div>
-        <div class="iv-barrow"><span class="iv-barlabel">料</span><div class="iv-bartrack"><span class="iv-barfill" style="width:100%;background:#e4a575"></span></div><b class="iv-barvalue">22</b></div>
-        <div class="iv-barrow"><span class="iv-barlabel">法</span><div class="iv-bartrack"><span class="iv-barfill" style="width:95.45%;background:#4b9498"></span></div><b class="iv-barvalue">21</b></div>
-        <div class="iv-barrow"><span class="iv-barlabel">环</span><div class="iv-bartrack"><span class="iv-barfill" style="width:22.73%;background:#80b9a9"></span></div><b class="iv-barvalue">5</b></div>
-        <div class="iv-barrow"><span class="iv-barlabel">其他</span><div class="iv-bartrack"><span class="iv-barfill" style="width:31.82%;background:#b9b9a6"></span></div><b class="iv-barvalue">7</b></div>
-      </div>
-      <div class="iv-barsub"><strong>68 项 · 团队准备模板</strong><span>条目分布 ≠ 完成率</span></div>
-    </div>
-    <div class="iv-card" aria-label="工作中的任务跟进方式">
-      <div class="iv-cardhead"><div><span class="iv-suptitle">02 · FOLLOW-UP</span><h2>Excel 待办跟进逻辑</h2></div><span class="iv-flag">流程示意 · 非实时看板</span></div>
-      <div class="iv-tasks">
-        <div class="iv-task"><div class="iv-taskhead"><b>物料齐套</b><span class="iv-label"><i class="iv-dot amber"></i>核对缺口</span></div><small>状态 · 风险 · 下一步</small></div>
-        <div class="iv-task"><div class="iv-taskhead"><b>工单与资料</b><span class="iv-label"><i class="iv-dot blue"></i>接口确认</span></div><small>适用范围 · 前置条件</small></div>
-        <div class="iv-task"><div class="iv-taskhead"><b>线体与工程资源</b><span class="iv-label"><i class="iv-dot amber"></i>安排核对</span></div><small>时间窗口 · 责任接口</small></div>
-        <div class="iv-task"><div class="iv-taskhead"><b>生产节点</b><span class="iv-label"><i class="iv-dot"></i>持续记录</span></div><small>计划与实际 · 异常反馈</small></div>
-      </div>
-      <div class="iv-brief"><span>日常工具</span><strong>Excel 清单 + 人工跟进 + 沟通记录</strong></div>
-    </div>
-    <div class="iv-card" aria-label="研发和试产异常的协调流程及风险概览">
-      <div class="iv-cardhead"><div><span class="iv-suptitle">03 · ISSUE RESPONSE</span><h2>一次异常，怎样推进？</h2></div><span class="iv-flag">真实协调方式 · 脱敏</span></div>
-      <div class="iv-flow" aria-label="现场发现，定位接口，补充书面确认，记录并跟进">
-        <div class="iv-step"><b>现场发现</b><span>上线条件异常</span></div>
-        <div class="iv-step"><b>定位接口</b><span>明确沟通对象</span></div>
-        <div class="iv-step"><b>书面同步</b><span>推动补充邮件</span></div>
-        <div class="iv-step"><b>记录跟进</b><span>后续风险建议</span></div>
-      </div>
-      <div class="iv-riskline"><strong>问题清单</strong><div class="iv-risksegments" role="img" aria-label="6类风险中初步建议高优先级3项、中高优先级1项、中优先级2项"><i></i><i></i><i></i></div><span class="iv-riskcaption">6 类风险 · 3 / 1 / 2</span></div>
-      <p class="iv-compact-note">风险级别为个人复盘建议，不表示问题均已正式关闭。</p>
-    </div>
-    <div class="iv-card" aria-label="个人参与三个项目的分工和交付物">
-      <div class="iv-cardhead"><div><span class="iv-suptitle">04 · MY RESPONSIBILITY</span><h2>三个项目，我承担什么？</h2></div><span class="iv-flag">角色清楚</span></div>
-      <div class="iv-projects">
-        <div class="iv-project"><span class="iv-projectnum">PROJECT A</span><b>平板试产</b><span>辅助导师</span></div>
-        <div class="iv-project"><span class="iv-projectnum">PROJECT B</span><b>新产品预研</b><span>独立推进 SMT 侧</span></div>
-        <div class="iv-project"><span class="iv-projectnum">PROJECT C</span><b>穿戴设备试产</b><span>独立推进 SMT 侧</span></div>
-      </div>
-      <div class="iv-tools"><span>Excel 追踪</span><span>物料准备</span><span>节点核对</span><span>异常协调</span><span>文档交接</span></div>
-    </div>
-  </div>
-  <div class="iv-footnote"><span><b>说明：</b>以真实实习工作为基础重构的面试展示，非企业工作系统截图；任务卡片为示意，不展示实际完成状态。</span><span>现场可直接向下滚动，无需跳转新页面。</span></div>
-</section>
-<details class="iv-archive" id="full-report"><summary>查看详细复盘、数据图表与扩展案例 <span style="font-size:11px;font-weight:550;color:#7b948b">非面试速览必读</span></summary>
-<header class="hero"><div class="pulse">PROJECT CASE STUDIES · 2026</div><div class="eyebrow">HUAQIN · SMT MANUFACTURING PROJECTS</div><h1>将复杂现场信息<br/>转化为 <em>清晰的决策依据</em></h1><p class="lead">参与三类消费电子试产项目，重点积累项目推进、异常协调与数据复盘经验。以下精选真实工作成果，聚焦“如何判断问题、如何组织证据、如何形成可执行方案”。</p><div class="hero-stats"><div class="hero-stat"><strong>01</strong><span>参与 3 个 SMT / NPI 试产项目</span></div><div class="hero-stat"><strong>02</strong><span>独立负责 SMT 侧协调推进</span></div><div class="hero-stat"><strong>03</strong><span>重点成果方向：复盘 · 数据 · 工具</span></div></div></header>
-<section class="report" id="overview"><div class="section-top"><div><div class="eyebrow">01 / EXPERIENCE AT A GLANCE</div><h2>经历与项目概况</h2><p class="section-desc">在华勤 SMT 制造项目管理实习中，我参与平板、智能手表与 IPC 摄像机项目的试产推进。以下不按项目写流水账，而按工作产出和能力展开。</p></div><div class="section-number">01</div></div>
-<div class="split-3"><div class="mini-feature c1"><div class="number">PROJECT / A</div><h3>荣耀平板试产项目</h3><p>参与支持试产，结合过站记录与现场事件整理时间线，开展异常窗口分析和会议复盘。</p></div><div class="mini-feature c2"><div class="number">PROJECT / B</div><h3>荣耀手表试产项目</h3><p>独立负责 SMT 侧协调推进，重点关注需求变更、物料、程序、MES 与交付风险。</p></div><div class="mini-feature c3"><div class="number">PROJECT / C</div><h3>IPC 智能摄像机项目</h3><p>独立负责 SMT 侧协调推进，跟进物料、工装及现场执行问题，推动资源对齐。</p></div></div>
-<div class="case-ribbon"><div class="ribbon-item"><b>Evidence-first</b><small>通过时间线、过站数据与记录交叉验证事实</small></div><div class="ribbon-item"><b>Risk-aware</b><small>提前识别影响排程与上线条件的变化</small></div><div class="ribbon-item"><b>Tool-driven</b><small>将反复沟通与零散数据转成可复用的图表和工具</small></div></div>
+<header class="hero"><div class="pulse">PROJECT CASE STUDIES · 2026</div><div class="eyebrow">HUAQIN · SMT MANUFACTURING PROJECTS</div><h1>试产项目推进与 <em>现场问题复盘</em></h1><p class="lead">参与三个消费电子试产项目，主要负责试产准备、生产节点跟进和现场异常协调。下面是我当时整理的部分工作记录和分析。</p><div class="hero-stats"><div class="hero-stat"><strong>01</strong><span>参与 3 个 SMT / NPI 试产项目</span></div><div class="hero-stat"><strong>02</strong><span>独立负责 SMT 侧协调推进</span></div><div class="hero-stat"><strong>03</strong><span>重点成果方向：复盘 · 数据 · 工具</span></div></div></header>
+<section class="report" id="overview"><div class="section-top"><div><div class="eyebrow">01 / EXPERIENCE AT A GLANCE</div><h2>经历与项目概况</h2><p class="section-desc">在华勤 SMT 制造项目管理实习中，我参与平板、智能手表与 智能门锁预研项目的试产推进。以下不按项目写流水账，而按工作产出和能力展开。</p></div><div class="section-number">01</div></div>
+<div class="split-3"><div class="mini-feature c1"><div class="number">PROJECT / A</div><h3>荣耀平板试产项目</h3><p>参与支持试产，结合过站记录与现场事件整理时间线，开展异常窗口分析和会议复盘。</p></div><div class="mini-feature c2"><div class="number">PROJECT / B</div><h3>荣耀手表试产项目</h3><p>独立负责 SMT 侧协调推进，重点关注需求变更、物料、程序、MES 与交付风险。</p></div><div class="mini-feature c3"><div class="number">PROJECT / C</div><h3>智能门锁预研项目</h3><p>独立负责 SMT 侧协调推进，跟进物料、工装及现场执行问题，推动资源对齐。</p></div></div>
+<div class="case-ribbon"><div class="ribbon-item"><b>时间记录</b><small>整理生产节点和异常发生时间</small></div><div class="ribbon-item"><b>问题跟进</b><small>跟进物料、资料和资源准备情况</small></div><div class="ribbon-item"><b>Excel 与复盘</b><small>用 Excel 和报告整理数据与问题</small></div></div>
 </section>
 <section class="report" id="timing"><div class="section-top"><div><div class="eyebrow">02 / PRODUCTION TIMING REVIEW</div><h2>生产时间分析与复盘</h2><p class="section-desc">从“现场为什么慢”回到“哪些节点有证据”。这组成果复用既有复盘报告中的三张核心分析图逻辑，完整保留数据区分：过程窗口、局部 Hold 与真正的净 Delay 不能简单相加。</p></div><div class="section-number">02</div></div>
-<div class="panel"><div class="top-rule"></div><div class="panel-inner"><div class="case-title"><h3>01 · 还原两天内的真实生产节奏</h3><span class="evidence">来源：平板试产复盘</span></div><p class="hint">将物料、首件、两面生产与质量异常放到一条统一时间轴，并标出发生了并行处理的窗口。</p><div class="timeline-frame"><svg aria-label="脱敏后的关键生产节点时间轴" id="timeline" role="img" viewbox="0 0 1100 435"></svg></div><div class="legend"><span><i style="background:#ec6b66"></i>准备 / 风险节点</span><span><i style="background:#399e9b"></i>生产 / 调试节点</span><span><i style="background:#568cc2"></i>恢复节点</span></div><p class="figure-note">图中显示的是来自原复盘材料的关键事件与过程窗口；非所有区间都是整线停机。具体日期、线体号、板件标识已隐藏。</p><div class="story-callout"><div class="big">≠</div><p><b>核心判断：</b> 一个跨越 4h59 的 T 面异常窗口，不能直接写成“全线停线 4h59”。必须结合 B 面是否仍在生产、首件调试时间和系统记录判定实际影响。</p></div></div></div>
-<div class="grid2 two-panels"><div class="panel"><div class="panel-inner"><div class="label">IMPACT PRIORITIZATION</div><h3>02 · 按影响窗口排序</h3><p class="hint">先量化，再判断是否为净损失；区分“值得追问”与“可以改善效率”的节点。</p><div class="bar-stack" id="impactBars"></div><p class="subnote">⚠ 部分条目是过程观察窗口而非净 Delay，图中条形长度不可直接相加。</p></div></div><div class="panel"><div class="panel-inner"><div class="label">MES · EVIDENCE CHECK</div><h3>03 · 用过站记录验证变化</h3><p class="hint">选择不同板件样本对照 B→T 流转耗时，看出异常前后节拍的明显变化。</p><div class="mes-chart" id="mesBars"></div><p class="mes-note">对照数据来自原 MES 图表；公开版使用匿名样本。长间隔是<strong>板件流转时间</strong>，仍需结合现场记录确认真实停线原因。</p></div></div></div>
+<div class="panel"><div class="top-rule"></div><div class="panel-inner"><div class="case-title"><h3>01 · 还原两天内的真实生产节奏</h3><span class="evidence">平板试产复盘</span></div><p class="hint">将物料、首件、两面生产与质量异常放到一条统一时间轴，并标出发生了并行处理的窗口。</p><div class="timeline-frame"><svg aria-label="脱敏后的关键生产节点时间轴" id="timeline" role="img" viewbox="0 0 1100 435"></svg></div><div class="legend"><span><i style="background:#ec6b66"></i>准备 / 风险节点</span><span><i style="background:#399e9b"></i>生产 / 调试节点</span><span><i style="background:#568cc2"></i>恢复节点</span></div><p class="figure-note">图中显示的是来自原复盘材料的关键事件与过程窗口；非所有区间都是整线停机。具体日期、线体号、板件标识已隐藏。</p><div class="story-callout"><div class="big">≠</div><p><b>核心判断：</b> 一个跨越 4h59 的 T 面异常窗口，不能直接写成“全线停线 4h59”。必须结合 B 面是否仍在生产、首件调试时间和系统记录判定实际影响。</p></div></div></div>
+<div class="grid2 two-panels"><div class="panel"><div class="panel-inner"><div class="label">IMPACT PRIORITIZATION</div><h3>02 · 按影响窗口排序</h3><p class="hint">先量化，再判断是否为净损失；区分“值得追问”与“可以改善效率”的节点。</p><div class="bar-stack" id="impactBars"></div><p class="subnote">⚠ 部分条目是过程观察窗口而非净 Delay，图中条形长度不可直接相加。</p></div></div><div class="panel"><div class="panel-inner"><div class="label">MES · EVIDENCE CHECK</div><h3>03 · 对比过站时间变化</h3><p class="hint">选择不同板件样本对照 B→T 流转耗时，看出异常前后节拍的明显变化。</p><div class="mes-chart" id="mesBars"></div><p class="mes-note">对照数据来自原 MES 图表；公开版使用匿名样本。长间隔是<strong>板件流转时间</strong>，仍需结合现场记录确认真实停线原因。</p></div></div></div>
 <div class="insight" style="margin-top:18px"><b>把数据变成复盘议题</b> 通过证据区分“前段准备、工艺调试、局部等待、并行生产”，再根据风险和影响优先级形成需要责任部门回答的问题。真正有价值的不是画出一张漂亮时间线，而是避免错误归因，并推动下一轮试产前置检查。</div>
 </section>
 <section class="report" id="data"><div class="section-top"><div><div class="eyebrow">03 / DATA ANALYSIS &amp; VISUALIZATION</div><h2>数据分析与可视化</h2><p class="section-desc">从单个工单切换到跨项目的资源视角：平均值能描述常态，波动与极值才更接近真实排线压力。本章优先保留线体需求波动分析原稿的核心指标与热力图结构。</p></div><div class="section-number">03</div></div>
@@ -418,7 +326,7 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 <div class="addon-surface"><span class="addon-tag addon-amber">案例 B · 并行资源冲突</span><h3 class="addon-case-title">两条线同时需要资源：仅确认“有工装”为什么不够？</h3><p class="addon-sub">来源：7月31日现场学习及异常复盘日报；该案例展示风险拆解方法，不宣称所有问题已经关闭。</p><div class="addon-grid2"><div class="addon-tile addon-orange"><h4>记录到的风险组合</h4><p>两线存在 Tray 盘共用冲突；替代盘未经充分适配验证；循环载具周转有限；特殊吸嘴也存在数量约束。单独看每个资源都“有”，合在一起却可能无法支持同时上线。</p></div><div class="addon-tile addon-teal"><h4>从“有无”升级为“可用性”</h4><p>需要同时检查需求数量、可用数量、包装 / 尺寸兼容、线体并行时段、周转周期和备用方案；不可把替代方案等同于已验证可用方案。</p></div></div>
 <div class="addon-flowline"><div class="addon-node">按线体和配置<br/>统计需求</div><span class="addon-arrow">→</span><div class="addon-node">核可用量与<br/>兼容性</div><span class="addon-arrow">→</span><div class="addon-node addon-hot">识别冲突与<br/>等待风险</div><span class="addon-arrow">→</span><div class="addon-node">拉通工程 / 计划<br/>确认可执行方案</div></div>
 <div class="addon-callout"><b>我的核心判断：</b>齐套不只是“有没有”，还要看 <b>够不够、对不对、能不能用、是否支持并行生产</b>。这一分析框架也适用于工装夹具、特殊吸嘴和测试资源。</div></div>
-<div class="addon-surface"><h3>从现场响应到真实关闭</h3><p class="addon-sub">一套可迁移到不同异常场景的检查方式；不是公司正式SOP，也不表示所有案例已完成全部步骤。</p><div class="addon-chiprow"><span class="addon-chip">记录异常与时间</span><span class="addon-chip">确认影响范围</span><span class="addon-chip">拉通 Owner 与方案</span><span class="addon-chip">确认恢复生产</span><span class="addon-chip">追踪永久改善</span><span class="addon-chip">验证与书面关闭</span></div></div>
+<div class="addon-surface"><h3>现场问题如何继续跟进</h3><p class="addon-sub">一套可迁移到不同异常场景的检查方式；不是公司正式SOP，也不表示所有案例已完成全部步骤。</p><div class="addon-chiprow"><span class="addon-chip">记录异常与时间</span><span class="addon-chip">确认影响范围</span><span class="addon-chip">拉通 Owner 与方案</span><span class="addon-chip">确认恢复生产</span><span class="addon-chip">追踪永久改善</span><span class="addon-chip">验证与书面关闭</span></div></div>
 </section>
 <section class="addon-section report" id="npi-risk-showcase" aria-label="试产风险管理专题">
 <div class="addon-section-bar"><div><span class="addon-eyebrow">06 / RISK MANAGEMENT CASE</span><h2>专项案例｜试产风险管理可视化</h2></div><span class="addon-big-num">06</span></div>
@@ -431,7 +339,60 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 <p class="addon-section-desc"><strong>真实在岗工作：</strong>使用 Excel 试产准备清单、物料跟进记录和异常问题表，靠人工核对与跨部门沟通推进事项，并未开发实时自动化看板。<strong>实习后探索：</strong>我依据对试产流程的理解制作交互式甘特图原型，演示任务依赖与变更影响；所有时间与进度均为模拟，不是当时使用的管理工具。</p>
 <a href="project-management-gantt.html" style="display:block;border:1px solid #d7e7e3;border-radius:20px;padding:27px 30px;background:linear-gradient(115deg,#eff8f5,#f7f5ee);text-decoration:none;color:#173a4a;box-shadow:0 12px 30px #153b380a">
 <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center"><div><div style="color:#319287;font-size:11px;font-weight:800;letter-spacing:1.4px">AFTER-INTERNSHIP VISUALIZATION EXPERIMENT</div><h3 style="font-size:24px;margin:10px 0">实习后探索：甘特图与变更推演</h3><div style="color:#627782;font-size:13px;line-height:1.85">8 项示意任务 · 4 种排期情景 · 专业责任接口 · 资源与里程碑管理</div></div><span style="display:inline-block;background:#173f4f;color:white;padding:12px 18px;border-radius:50px;font-size:13px;font-weight:800">查看可视化原型 →</span></div></a></section>
-</details>
+
+<section class="ps-section report" id="checklist-visual">
+  <div class="ps-heading"><div><div class="ps-eyebrow">08 / EXCEL CHECKLIST</div><h2>试产准备清单</h2></div><span class="ps-pill">工作表结构 · 分类统计</span></div>
+  <div class="ps-grid">
+    <div class="ps-surface">
+      <div class="ps-head"><h3>68 项准备事项</h3><span class="ps-caption">团队 Excel 模板</span></div>
+      <div class="ps-bars" role="img" aria-label="准备事项分类：人员8项，设备5项，物料22项，方法工艺21项，环境5项，其他7项">
+        <div class="ps-bar"><span class="ps-bar-label">人员</span><div class="ps-track"><span class="ps-fill mint" style="width:36.36%"></span></div><b class="ps-value">8</b></div>
+        <div class="ps-bar"><span class="ps-bar-label">设备</span><div class="ps-track"><span class="ps-fill mint" style="width:22.73%"></span></div><b class="ps-value">5</b></div>
+        <div class="ps-bar"><span class="ps-bar-label">物料</span><div class="ps-track"><span class="ps-fill orange" style="width:100%"></span></div><b class="ps-value">22</b></div>
+        <div class="ps-bar"><span class="ps-bar-label">工艺方法</span><div class="ps-track"><span class="ps-fill blue" style="width:95.45%"></span></div><b class="ps-value">21</b></div>
+        <div class="ps-bar"><span class="ps-bar-label">环境</span><div class="ps-track"><span class="ps-fill mint" style="width:22.73%"></span></div><b class="ps-value">5</b></div>
+        <div class="ps-bar"><span class="ps-bar-label">其他</span><div class="ps-track"><span class="ps-fill mint" style="width:31.82%"></span></div><b class="ps-value">7</b></div>
+      </div>
+      <div class="ps-total"><b>68</b><span>检查项 · 不是完成数或完成率</span></div>
+    </div>
+    <div class="ps-surface">
+      <div class="ps-head"><h3>表格里主要看什么？</h3><span class="ps-caption">简化展示</span></div>
+      <table class="ps-table" aria-label="试产准备清单内容分类"><thead><tr><th>类别</th><th>检查内容</th></tr></thead><tbody>
+        <tr><td>人</td><td>人员安排、培训与接口</td></tr>
+        <tr><td>机</td><td>线体、工装与设备准备</td></tr>
+        <tr><td>料</td><td>齐套、特殊物料、备料情况</td></tr>
+        <tr><td>法</td><td>工单、资料、程序和工艺条件</td></tr>
+        <tr><td>环</td><td>现场和作业环境准备</td></tr>
+        <tr><td>其他</td><td>上一阶段问题及额外需求</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+  <p class="ps-disclosure">清单为团队协作使用的 Excel 模板。我在 SMT 侧主要结合准备事项核对条件、跟进缺口并联系相关接口。原始责任人、内部编号和细节未公开。</p>
+</section>
+
+<section class="ps-section report" id="todo-visual">
+  <div class="ps-heading"><div><div class="ps-eyebrow">09 / DAILY FOLLOW-UP</div><h2>我的任务跟进方式</h2></div><span class="ps-pill">Excel + 沟通记录</span></div>
+  <div class="ps-surface">
+    <div class="ps-brief" aria-label="项目管理工作步骤">
+      <div class="ps-brief-cell"><b>看准备情况</b><small>人 / 机 / 料 / 法 / 环</small></div>
+      <div class="ps-brief-cell"><b>找未完成项</b><small>缺什么 / 影响什么</small></div>
+      <div class="ps-brief-cell"><b>联系接口</b><small>确认安排与反馈</small></div>
+      <div class="ps-brief-cell"><b>更新记录</b><small>继续跟进 / 交接</small></div>
+    </div>
+    <table class="ps-todo-table" aria-label="实际工作类型与记录方式，非实时任务系统">
+      <thead><tr><th style="width:25%">跟进事项</th><th style="width:48%">我主要做什么</th><th>工作记录</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ps-id">01</span>试产物料齐套</td><td>查看缺口、联系物控或研发接口、记录更新</td><td>Excel 跟进表</td></tr>
+        <tr><td><span class="ps-id">02</span>上线前准备</td><td>核对工单、验证资料、资源准备的进展</td><td>准备清单</td></tr>
+        <tr><td><span class="ps-id">03</span>生产节点</td><td>跟进首件、生产进度及临时安排变化</td><td>节点 / 日报</td></tr>
+        <tr><td><span class="ps-id">04</span>现场异常</td><td>确认情况、联系对应接口、跟进反馈</td><td>问题清单</td></tr>
+        <tr><td><span class="ps-id">05</span>阶段交接</td><td>整理项目情况、未完成事项和注意点</td><td>交接文档</td></tr>
+      </tbody>
+    </table>
+    <div class="ps-foot">这是对真实工作内容的简化整理，不是我实习时开发的自动化任务看板，也不代表每一项都已关闭。</div>
+  </div>
+</section>
+
 <footer class="footerline">© 2026 · <b>Personal Project Portfolio</b> · 工作内容经概括、改写与脱敏，仅用于能力展示。不代表企业官方发布数据。</footer>
 </div></main>
 </div>
