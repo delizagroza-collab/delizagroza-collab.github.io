@@ -225,6 +225,38 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 @media(max-width:620px){.ps-heading{flex-wrap:wrap}.ps-surface{padding:17px}.ps-table th,.ps-table td{font-size:11px;padding:10px 7px}.ps-todo-table td,.ps-todo-table th{padding:10px 7px;font-size:11px}.ps-brief-cell{padding:13px 6px}}
 
 
+
+/* 08 / post-build review: opened inline, no filters, no extra page */
+.rv-stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.rv-stage{min-width:0;min-height:110px;padding:18px 17px;border:1px solid #dce8e4;background:#fff;border-radius:17px;position:relative}
+.rv-stage:not(:last-child):after{content:"›";position:absolute;right:-16px;top:36px;font-size:28px;font-weight:850;color:#4c9a8b;z-index:2}
+.rv-stage b{display:block;font-size:14px;color:#254f54;margin-bottom:9px}
+.rv-stage .rv-time{font-size:11px;display:block;color:#39978a;font-weight:850;letter-spacing:.08em;margin-bottom:10px}
+.rv-stage p{font-size:12px;line-height:1.7;color:#748b8d;margin:0}
+.rv-stage.muted{background:#f5f8f6}
+.rv-stage.last{background:#eaf5f0;border-color:#c7e4d8}
+.rv-titlebar{display:flex;justify-content:space-between;align-items:center;gap:9px;margin:0 0 17px}
+.rv-titlebar h3{margin:0;font-size:19px;color:#1c454d}
+.rv-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.rv-category{background:#f5f8f7;border:1px solid #e3ebe8;border-radius:12px;min-height:93px;padding:16px 14px}
+.rv-category span{font-size:10px;font-weight:800;letter-spacing:.06em;color:#91a7a0}
+.rv-category b{display:block;margin-top:8px;font-size:13px;line-height:1.5;color:#284e58}
+.rv-case{background:linear-gradient(120deg,#123947,#174f53);color:#fff;border-radius:17px;padding:24px 27px}
+.rv-case .rv-case-kicker{font-size:10px;font-weight:850;letter-spacing:.16em;color:#90e0cb}
+.rv-case h3{font-size:20px;line-height:1.4;margin:10px 0 17px;color:#fff}
+.rv-case-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.rv-case-step{border:1px solid #ffffff25;background:#ffffff12;padding:15px 10px;border-radius:12px;min-height:80px}
+.rv-case-step b{font-size:12px;color:#fff;display:block}
+.rv-case-step span{font-size:11px;line-height:1.55;color:#c7e2db;display:block;margin-top:8px}
+.rv-case-foot{margin-top:15px;font-size:11px;color:#c9e0df;line-height:1.8}
+.rv-two{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:16px}
+.rv-two>div{border-radius:13px;background:#f3f8f6;border:1px solid #dde9e5;padding:17px 19px}
+.rv-two>div:nth-child(2){background:#fff8f2;border-color:#f0e2d4}
+.rv-two b{font-size:12px;color:#2b6960}
+.rv-two>div:nth-child(2) b{color:#ae744a}
+.rv-two p{margin:8px 0 0;font-size:12px;color:#677f80;line-height:1.75}
+@media(max-width:800px){.rv-stages{grid-template-columns:1fr}.rv-stage:not(:last-child):after{right:20px;top:auto;bottom:-24px;transform:rotate(90deg)}.rv-categories{grid-template-columns:repeat(2,1fr)}.rv-case-flow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.rv-categories{grid-template-columns:repeat(2,1fr)}.rv-category{min-height:80px}.rv-two{grid-template-columns:1fr}.rv-case{padding:19px}.rv-case-step{padding:11px}}
 </style>
 <link rel="stylesheet" href="shared-header.css?v=20261014-unified2">
 </head>
@@ -252,10 +284,9 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 <a href="#data"><span class="num">03</span><span>数据分析与可视化</span></a>
 <a href="#method"><span class="num">04</span><span>试产项目工作方法</span></a>
 <a href="#incident"><span class="num">05</span><span>异常协调与闭环</span></a>
-<a href="#npi-risk-showcase"><span class="num">06</span><span>研发问题与风险管理</span></a>
-<a href="#gantt-showcase"><span class="num">07</span><span>甘特图延伸探索</span></a>
-<a href="#checklist-visual"><span class="num">08</span><span>试产准备清单</span></a>
-<a href="#todo-visual"><span class="num">09</span><span>Excel 跟进事项</span></a>
+<a href="#checklist-visual"><span class="num">06</span><span>试产准备清单</span></a>
+<a href="#todo-visual"><span class="num">07</span><span>Excel 跟进事项</span></a>
+<a href="#postmortem-visual"><span class="num">08</span><span>研发问题清单与复盘</span></a>
 </nav><div class="side-footer"><div class="tagline">工程项目实践 · 数据复盘 · 工具方法</div>真实项目数据脱敏呈现。<br/>本模块为个人作品展示，不代表公司官方立场。</div></aside>
 <main class="main"><div class="container">
 <header class="hero"><div class="pulse">PROJECT CASE STUDIES · 2026</div><div class="eyebrow">HUAQIN · SMT MANUFACTURING PROJECTS</div><h1>将复杂现场信息<br/>转化为 <em>清晰的决策依据</em></h1><p class="lead">参与三类消费电子试产项目，重点积累项目推进、异常协调与数据复盘经验。以下精选真实工作成果，聚焦“如何判断问题、如何组织证据、如何形成可执行方案”。</p><div class="hero-stats"><div class="hero-stat"><strong>01</strong><span>参与 3 个 SMT / NPI 试产项目</span></div><div class="hero-stat"><strong>02</strong><span>独立负责 SMT 侧协调推进</span></div><div class="hero-stat"><strong>03</strong><span>重点成果方向：复盘 · 数据 · 工具</span></div></div></header>
@@ -328,20 +359,8 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 <div class="addon-callout"><b>我的核心判断：</b>齐套不只是“有没有”，还要看 <b>够不够、对不对、能不能用、是否支持并行生产</b>。这一分析框架也适用于工装夹具、特殊吸嘴和测试资源。</div></div>
 <div class="addon-surface"><h3>从现场响应到真实关闭</h3><p class="addon-sub">一套可迁移到不同异常场景的检查方式；不是公司正式SOP，也不表示所有案例已完成全部步骤。</p><div class="addon-chiprow"><span class="addon-chip">记录异常与时间</span><span class="addon-chip">确认影响范围</span><span class="addon-chip">拉通 Owner 与方案</span><span class="addon-chip">确认恢复生产</span><span class="addon-chip">追踪永久改善</span><span class="addon-chip">验证与书面关闭</span></div></div>
 </section>
-<section class="addon-section report" id="npi-risk-showcase" aria-label="试产风险管理专题">
-<div class="addon-section-bar"><div><span class="addon-eyebrow">06 / RISK MANAGEMENT CASE</span><h2>专项案例｜试产风险管理可视化</h2></div><span class="addon-big-num">06</span></div>
-<p class="addon-section-desc">从一份试产研发问题初版清单出发，对六类风险进行脱敏归纳、初步分级与跨部门协调复盘。可以按优先级筛选，查看一项有实际沟通记录的现场案例，并区分已发生的工作与后续改善建议。</p>
-<a href="npi-risk-case.html" style="display:block;border:1px solid #cfe2dd;border-radius:20px;padding:27px 30px;background:linear-gradient(118deg,#f0f8f4,#f9f5ec);text-decoration:none;color:#17394a;box-shadow:0 12px 30px #153b380a">
-<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px;align-items:center"><div><div style="color:#2a8c83;font-size:11px;font-weight:800;letter-spacing:1.5px">INTERACTIVE CASE STUDY</div><h3 style="font-size:24px;margin:10px 0">从现场异常到风险追踪</h3><div style="color:#627782;font-size:13px;line-height:1.9">6 类风险事项 · 3 项优先关注 · 1 项实际协调实例 · 5 步跟进框架</div></div><span style="display:inline-block;background:#173c4d;color:#fff;padding:12px 18px;border-radius:50px;font-size:13px;font-weight:800">查看交互式专题 →</span></div>
-</a></section>
-<section class="addon-section report" id="gantt-showcase" aria-label="项目排期与甘特图专题">
-<div class="addon-section-bar"><div><span class="addon-eyebrow">07 / GANTT &amp; RESOURCE PLANNING</span><h2>延伸探索｜甘特图交互原型（非在岗交付）</h2></div><span class="addon-big-num">07</span></div>
-<p class="addon-section-desc"><strong>真实在岗工作：</strong>使用 Excel 试产准备清单、物料跟进记录和异常问题表，靠人工核对与跨部门沟通推进事项，并未开发实时自动化看板。<strong>实习后探索：</strong>我依据对试产流程的理解制作交互式甘特图原型，演示任务依赖与变更影响；所有时间与进度均为模拟，不是当时使用的管理工具。</p>
-<a href="project-management-gantt.html" style="display:block;border:1px solid #d7e7e3;border-radius:20px;padding:27px 30px;background:linear-gradient(115deg,#eff8f5,#f7f5ee);text-decoration:none;color:#173a4a;box-shadow:0 12px 30px #153b380a">
-<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center"><div><div style="color:#319287;font-size:11px;font-weight:800;letter-spacing:1.4px">AFTER-INTERNSHIP VISUALIZATION EXPERIMENT</div><h3 style="font-size:24px;margin:10px 0">实习后探索：甘特图与变更推演</h3><div style="color:#627782;font-size:13px;line-height:1.85">8 项示意任务 · 4 种排期情景 · 专业责任接口 · 资源与里程碑管理</div></div><span style="display:inline-block;background:#173f4f;color:white;padding:12px 18px;border-radius:50px;font-size:13px;font-weight:800">查看可视化原型 →</span></div></a></section>
-
 <section class="ps-section report" id="checklist-visual">
-  <div class="ps-heading"><div><div class="ps-eyebrow">08 / EXCEL CHECKLIST</div><h2>试产准备清单</h2></div><span class="ps-pill">工作表结构 · 分类统计</span></div>
+  <div class="ps-heading"><div><div class="ps-eyebrow">06 / PRE-BUILD CHECKLIST</div><h2>产前准备｜68项检查清单</h2></div><span class="ps-pill">工作表结构 · 分类统计</span></div>
   <div class="ps-grid">
     <div class="ps-surface">
       <div class="ps-head"><h3>68 项准备事项</h3><span class="ps-caption">团队 Excel 模板</span></div>
@@ -367,11 +386,11 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
       </tbody></table>
     </div>
   </div>
-  <p class="ps-disclosure">清单为团队协作使用的 Excel 模板。我在 SMT 侧主要结合准备事项核对条件、跟进缺口并联系相关接口。原始责任人、内部编号和细节未公开。</p>
+  <p class="ps-disclosure">这份 Excel 是团队协作清单。试产前我按照 68 项内容逐项检查适用性与准备情况，并跟进未齐套或尚未确认的事项。逐项核对不代表所有条件都已满足，也不代表临时问题不会发生。原始责任人及内部细节未公开。</p>
 </section>
 
 <section class="ps-section report" id="todo-visual">
-  <div class="ps-heading"><div><div class="ps-eyebrow">09 / DAILY FOLLOW-UP</div><h2>我的任务跟进方式</h2></div><span class="ps-pill">Excel + 沟通记录</span></div>
+  <div class="ps-heading"><div><div class="ps-eyebrow">07 / EXCEL FOLLOW-UP</div><h2>产中跟进｜Excel 与沟通记录</h2></div><span class="ps-pill">Excel + 沟通记录</span></div>
   <div class="ps-surface">
     <div class="ps-brief" aria-label="项目管理工作步骤">
       <div class="ps-brief-cell"><b>看准备情况</b><small>人 / 机 / 料 / 法 / 环</small></div>
@@ -393,6 +412,44 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
   </div>
 </section>
 
+
+
+<section class="ps-section report" id="postmortem-visual" aria-label="试产研发问题清单与事后复盘">
+  <div class="ps-heading"><div><div class="ps-eyebrow">08 / POST-BUILD REVIEW</div><h2>研发问题清单｜试产后复盘</h2></div><span class="ps-pill">事后总结 · 非产前风险台账</span></div>
+  <div class="rv-stages" aria-label="产前核对、产中应对和事后复盘三个阶段">
+    <div class="rv-stage muted"><span class="rv-time">01 · 产前</span><b>68 项准备清单逐项核对</b><p>检查适用性、准备状态；跟进已知缺口</p></div>
+    <div class="rv-stage"><span class="rv-time">02 · 产中</span><b>处理临时问题与变化</b><p>已有检查仍无法覆盖所有现场突发情况</p></div>
+    <div class="rv-stage last"><span class="rv-time">03 · 事后</span><b>整理研发问题清单</b><p>回顾问题原因，提出下一阶段改进建议</p></div>
+  </div>
+  <div class="ps-surface" style="margin-bottom:15px">
+    <div class="rv-titlebar"><h3>六类复盘问题</h3><span class="ps-pill">6 类 · 分类归纳</span></div>
+    <div class="rv-categories">
+      <div class="rv-category"><span>01 / 物料</span><b>特殊物料上线条件</b></div>
+      <div class="rv-category"><span>02 / 资料</span><b>验证资料与任务范围</b></div>
+      <div class="rv-category"><span>03 / 变更</span><b>临时新增执行要求</b></div>
+      <div class="rv-category"><span>04 / 准备</span><b>需求与资料发布节奏</b></div>
+      <div class="rv-category"><span>05 / 排产</span><b>临时数量和计划调整</b></div>
+      <div class="rv-category"><span>06 / 工艺</span><b>方案与现场条件适配</b></div>
+    </div>
+    <p class="ps-disclosure">上述六类为我在试产结束后根据问题清单整理的分类，不等于产前就已全部识别，也不表示每项问题都已完成长期整改。</p>
+  </div>
+  <div class="rv-case">
+    <div class="rv-case-kicker">ACTUAL COORDINATION / 实际参与的协调</div>
+    <h3>案例：特殊物料上线条件未提前同步</h3>
+    <div class="rv-case-flow" aria-label="现场发现、核实条件、联系研发、补充正式沟通">
+      <div class="rv-case-step"><b>现场发现</b><span>出现特殊上线条件</span></div>
+      <div class="rv-case-step"><b>核实问题</b><span>明确所需确认事项</span></div>
+      <div class="rv-case-step"><b>联系研发</b><span>协调相关接口</span></div>
+      <div class="rv-case-step"><b>补充书面沟通</b><span>推动正式邮件确认</span></div>
+    </div>
+    <div class="rv-case-foot">这部分是当时发生的协调工作；后续把它整理进清单、提出提前同步的建议，属于事后复盘，不等同于已经完成长期整改。</div>
+  </div>
+  <div class="rv-two">
+    <div><b>我在实习中实际做的</b><p>逐项核对准备清单、跟进未完成事项、处理现场异常、联系接口并记录问题。</p></div>
+    <div><b>事后总结出的改进方向</b><p>把易遗漏的特殊条件、资料变更和执行范围确认纳入下一次试产的重点提醒。</p></div>
+  </div>
+  <p class="ps-disclosure">所有案例均经概括与脱敏；专业技术判断与正式结案由相应接口负责。检查清单能帮助提前管理已知风险，但不能保证所有临时异常都不会发生。</p>
+</section>
 
 <footer class="footerline">© 2026 · <b>Personal Project Portfolio</b> · 工作内容经概括、改写与脱敏，仅用于能力展示。不代表企业官方发布数据。</footer>
 </div></main>
