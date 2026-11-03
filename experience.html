@@ -257,6 +257,27 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 .rv-two p{margin:8px 0 0;font-size:12px;color:#677f80;line-height:1.75}
 @media(max-width:800px){.rv-stages{grid-template-columns:1fr}.rv-stage:not(:last-child):after{right:20px;top:auto;bottom:-24px;transform:rotate(90deg)}.rv-categories{grid-template-columns:repeat(2,1fr)}.rv-case-flow{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:580px){.rv-categories{grid-template-columns:repeat(2,1fr)}.rv-category{min-height:80px}.rv-two{grid-template-columns:1fr}.rv-case{padding:19px}.rv-case-step{padding:11px}}
+
+/* Compact Excel-like preparation checklist; no synthetic completion metrics. */
+.ps-excel-card{background:#fff;border:1px solid #dbe8e3;border-radius:16px;overflow:hidden;box-shadow:0 12px 27px rgba(27,66,62,.04)}
+.ps-excel-head{background:#f4f9f6;border-bottom:1px solid #d9e6df;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:13px}
+.ps-excel-head>div{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ps-excel-icon{font-size:14px;font-weight:900;color:#fff;background:#18764d;width:28px;height:28px;border-radius:6px;display:grid;place-items:center}
+.ps-excel-head strong{font-size:16px;color:#21453b}
+.ps-excel-head small{color:#748e84;font-size:11px}
+.ps-excel-tab{font-size:11px;font-weight:800;color:#2c8262;border:1px solid #cce4d6;background:#e8f5ed;border-radius:7px;padding:8px 11px;white-space:nowrap}
+.ps-excel-scroll{overflow-x:auto;max-width:100%;scrollbar-color:#97b7aa #eff5f1}
+.ps-excel-table{width:100%;min-width:630px;table-layout:fixed;border-collapse:collapse}
+.ps-excel-table th{font-size:11px;color:#28614b;text-align:left;background:#eaf3ec;border-right:1px solid #d7e7dc;border-bottom:1px solid #d7e7dc;padding:11px 14px;letter-spacing:.035em}
+.ps-excel-table td{font-size:12px;line-height:1.6;color:#4d6870;padding:11px 14px;border-bottom:1px solid #e6efea;border-right:1px solid #edf3ef;vertical-align:middle}
+.ps-excel-table tr:nth-child(even) td{background:#fafcfb}
+.ps-excel-table tr:last-child td{border-bottom:0}
+.ps-excel-table td:last-child{font-size:11px;color:#6d8585;white-space:nowrap}
+.ps-excel-table b{font-weight:750;color:#2a4d4c}
+.ps-excel-tag{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:6px;background:#e9f3ee;font-weight:850;color:#3a8865;font-size:11px}
+.ps-excel-bottom{padding:12px 18px;color:#477b64;font-size:11px;background:#f3f9f5;border-top:1px solid #dfebe4;display:flex;align-items:center;gap:8px;line-height:1.7}
+.ps-excel-dot{width:7px;height:7px;border-radius:100%;background:#43996d;flex:none}
+@media(max-width:650px){.ps-excel-head{padding:13px 14px}.ps-excel-head small{display:block;width:100%;margin-left:38px}.ps-excel-table th,.ps-excel-table td{padding:10px 11px}}
 </style>
 <link rel="stylesheet" href="shared-header.css?v=20261014-unified2">
 </head>
@@ -360,33 +381,29 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 <div class="addon-surface"><h3>从现场响应到真实关闭</h3><p class="addon-sub">一套可迁移到不同异常场景的检查方式；不是公司正式SOP，也不表示所有案例已完成全部步骤。</p><div class="addon-chiprow"><span class="addon-chip">记录异常与时间</span><span class="addon-chip">确认影响范围</span><span class="addon-chip">拉通 Owner 与方案</span><span class="addon-chip">确认恢复生产</span><span class="addon-chip">追踪永久改善</span><span class="addon-chip">验证与书面关闭</span></div></div>
 </section>
 <section class="ps-section report" id="checklist-visual">
-  <div class="ps-heading"><div><div class="ps-eyebrow">06 / PRE-BUILD CHECKLIST</div><h2>产前准备｜68项检查清单</h2></div><span class="ps-pill">工作表结构 · 分类统计</span></div>
-  <div class="ps-grid">
-    <div class="ps-surface">
-      <div class="ps-head"><h3>68 项准备事项</h3><span class="ps-caption">团队 Excel 模板</span></div>
-      <div class="ps-bars" role="img" aria-label="准备事项分类：人员8项，设备5项，物料22项，方法工艺21项，环境5项，其他7项">
-        <div class="ps-bar"><span class="ps-bar-label">人员</span><div class="ps-track"><span class="ps-fill mint" style="width:36.36%"></span></div><b class="ps-value">8</b></div>
-        <div class="ps-bar"><span class="ps-bar-label">设备</span><div class="ps-track"><span class="ps-fill mint" style="width:22.73%"></span></div><b class="ps-value">5</b></div>
-        <div class="ps-bar"><span class="ps-bar-label">物料</span><div class="ps-track"><span class="ps-fill orange" style="width:100%"></span></div><b class="ps-value">22</b></div>
-        <div class="ps-bar"><span class="ps-bar-label">工艺方法</span><div class="ps-track"><span class="ps-fill blue" style="width:95.45%"></span></div><b class="ps-value">21</b></div>
-        <div class="ps-bar"><span class="ps-bar-label">环境</span><div class="ps-track"><span class="ps-fill mint" style="width:22.73%"></span></div><b class="ps-value">5</b></div>
-        <div class="ps-bar"><span class="ps-bar-label">其他</span><div class="ps-track"><span class="ps-fill mint" style="width:31.82%"></span></div><b class="ps-value">7</b></div>
-      </div>
-      <div class="ps-total"><b>68</b><span>检查项 · 不是完成数或完成率</span></div>
+  <div class="ps-heading"><div><div class="ps-eyebrow">06 / PRE-BUILD CHECKLIST</div><h2>产前准备｜Excel 清单节选</h2></div><span class="ps-pill">从实际表格脱敏整理</span></div>
+  <div class="ps-excel-card">
+    <div class="ps-excel-head"><div><span class="ps-excel-icon" aria-hidden="true">X</span><strong>试产准备清单</strong><small>原始清单 68 项 · 以下选取部分内容</small></div><span class="ps-excel-tab">产前核对</span></div>
+    <div class="ps-excel-scroll" tabindex="0" aria-label="横向滚动查看试产准备事项脱敏表">
+      <table class="ps-excel-table" aria-label="试产准备清单实际内容脱敏节选">
+        <colgroup><col style="width:9%"><col style="width:24%"><col style="width:48%"><col style="width:19%"></colgroup>
+        <thead><tr><th scope="col">类别</th><th scope="col">准备事项</th><th scope="col">核对重点（简化）</th><th scope="col">时间节点</th></tr></thead>
+        <tbody>
+          <tr><td><span class="ps-excel-tag">人</span></td><td><b>后段人力安排</b></td><td>与测试、工艺等接口核对特殊作业及人员需求</td><td>试产启动前</td></tr>
+          <tr><td><span class="ps-excel-tag">机</span></td><td><b>线体、夹治具准备</b></td><td>确认线体安排、工装到料及设备点检情况</td><td>开线前</td></tr>
+          <tr><td><span class="ps-excel-tag">料</span></td><td><b>物料齐套</b></td><td>检查当前试产配置的缺料和可上线情况</td><td>上线前</td></tr>
+          <tr><td><span class="ps-excel-tag">料</span></td><td><b>重点管控物料</b></td><td>关注余量有限的物料，提前沟通准备风险</td><td>试产启动前</td></tr>
+          <tr><td><span class="ps-excel-tag">料</span></td><td><b>特殊物料准备</b></td><td>确认特殊供料形式及对应的上线准备要求</td><td>试产启动前</td></tr>
+          <tr><td><span class="ps-excel-tag">料</span></td><td><b>仓储备料</b></td><td>核对备料需求及现场领取、上料准备安排</td><td>上线前</td></tr>
+          <tr><td><span class="ps-excel-tag">法</span></td><td><b>工单与验证资料</b></td><td>确认工单、验证资料及适用范围是否对应</td><td>试产启动前</td></tr>
+          <tr><td><span class="ps-excel-tag">法</span></td><td><b>研发资料准备</b></td><td>核对物料清单、工程图纸及版本更新情况</td><td>试产启动前</td></tr>
+          <tr><td><span class="ps-excel-tag">环</span></td><td><b>现场环境准备</b></td><td>确认现场整理与基本作业环境检查</td><td>开线前</td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="ps-surface">
-      <div class="ps-head"><h3>表格里主要看什么？</h3><span class="ps-caption">简化展示</span></div>
-      <table class="ps-table" aria-label="试产准备清单内容分类"><thead><tr><th>类别</th><th>检查内容</th></tr></thead><tbody>
-        <tr><td>人</td><td>人员安排、培训与接口</td></tr>
-        <tr><td>机</td><td>线体、工装与设备准备</td></tr>
-        <tr><td>料</td><td>齐套、特殊物料、备料情况</td></tr>
-        <tr><td>法</td><td>工单、资料、程序和工艺条件</td></tr>
-        <tr><td>环</td><td>现场和作业环境准备</td></tr>
-        <tr><td>其他</td><td>上一阶段问题及额外需求</td></tr>
-      </tbody></table>
-    </div>
+    <div class="ps-excel-bottom"><span class="ps-excel-dot"></span><span>Excel 工作方式：逐项核对 → 记录缺口 → 联系接口 → 持续跟进</span></div>
   </div>
-  <p class="ps-disclosure">这份 Excel 是团队协作清单。试产前我按照 68 项内容逐项检查适用性与准备情况，并跟进未齐套或尚未确认的事项。逐项核对不代表所有条件都已满足，也不代表临时问题不会发生。原始责任人及内部细节未公开。</p>
+  <p class="ps-disclosure">表格根据实际团队清单选取、改写并脱敏，不是原始文件截图，也没有虚构“已完成”状态。试产前我按清单逐项核对，但实际生产仍可能遇到新增需求或临时异常。</p>
 </section>
 
 <section class="ps-section report" id="todo-visual">
