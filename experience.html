@@ -278,7 +278,7 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 .ps-excel-bottom{padding:12px 18px;color:#477b64;font-size:11px;background:#f3f9f5;border-top:1px solid #dfebe4;display:flex;align-items:center;gap:8px;line-height:1.7}
 .ps-excel-dot{width:7px;height:7px;border-radius:100%;background:#43996d;flex:none}
 @media(max-width:650px){.ps-excel-head{padding:13px 14px}.ps-excel-head small{display:block;width:100%;margin-left:38px}.ps-excel-table th,.ps-excel-table td{padding:10px 11px}}
-</style>
+.dp-filebar{display:flex;align-items:center;gap:11px;background:#edf6f0;border:1px solid #d5e5da;border-bottom:0;border-radius:17px 17px 0 0;padding:15px 18px;color:#285343}.dp-filebar b{display:block;font-size:16px}.dp-filebar small{display:block;color:#749185;font-size:11px;margin-top:3px}.dp-x{display:grid;place-items:center;width:31px;height:31px;border-radius:5px;background:#187749;color:#fff;font-weight:900}.dp-sheet-scroll{overflow-x:auto;max-width:100%;border:1px solid #d4e4da;scrollbar-color:#8fae9b #eff6f0}.dp-sheet{border-collapse:collapse;table-layout:fixed;width:1116px;background:#fff}.dp-sheet th{position:sticky;top:0;background:#e4f0e8;color:#28684a;font-weight:850;font-size:11px;text-align:left;padding:11px 12px;border-right:1px solid #cee1d4;border-bottom:1px solid #cedfd5}.dp-sheet td{font-size:11.5px;line-height:1.8;vertical-align:top;padding:12px;border-bottom:1px solid #e3ece6;border-right:1px solid #e8f0eb;color:#56706b}.dp-sheet tr:nth-child(even) td{background:#fafcfb}.dp-sheet .dp-n{font-weight:800;color:#8fa49a}.dp-sheet .dp-cat{font-size:11px;color:#32836b;font-weight:800}.dp-sheet .dp-task{color:#234c41;font-weight:800}.dp-sheet .dp-detail{color:#47625a}.dp-sheet .dp-time,.dp-sheet .dp-owner{color:#69817b;font-size:11px}.dp-sheetfoot{border:1px solid #d5e5da;border-top:0;background:#f4f9f5;border-radius:0 0 15px 15px;padding:12px 15px;color:#65857b;font-size:11px;line-height:1.7}@media(max-width:650px){.dp-filebar{padding:13px}.dp-filebar b{font-size:13px}}</style>
 <link rel="stylesheet" href="shared-header.css?v=20261014-unified2">
 </head>
 <body class="internship-page">
@@ -305,7 +305,7 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 <a href="#data"><span class="num">03</span><span>数据分析与可视化</span></a>
 <a href="#method"><span class="num">04</span><span>试产项目工作方法</span></a>
 <a href="#incident"><span class="num">05</span><span>异常协调与闭环</span></a>
-<a href="#checklist-visual"><span class="num">06</span><span>试产准备清单</span></a>
+<a href="#checklist-visual"><span class="num">06</span><span>试产准备表（原件脱敏）</span></a>
 <a href="#todo-visual"><span class="num">07</span><span>Excel 跟进事项</span></a>
 <a href="#postmortem-visual"><span class="num">08</span><span>研发问题清单与复盘</span></a>
 </nav><div class="side-footer"><div class="tagline">工程项目实践 · 数据复盘 · 工具方法</div>真实项目数据脱敏呈现。<br/>本模块为个人作品展示，不代表公司官方立场。</div></aside>
@@ -381,29 +381,79 @@ section.report{scroll-margin-top:35px;margin:0 0 72px}.section-top{display:flex;
 <div class="addon-surface"><h3>从现场响应到真实关闭</h3><p class="addon-sub">一套可迁移到不同异常场景的检查方式；不是公司正式SOP，也不表示所有案例已完成全部步骤。</p><div class="addon-chiprow"><span class="addon-chip">记录异常与时间</span><span class="addon-chip">确认影响范围</span><span class="addon-chip">拉通 Owner 与方案</span><span class="addon-chip">确认恢复生产</span><span class="addon-chip">追踪永久改善</span><span class="addon-chip">验证与书面关闭</span></div></div>
 </section>
 <section class="ps-section report" id="checklist-visual">
-  <div class="ps-heading"><div><div class="ps-eyebrow">06 / PRE-BUILD CHECKLIST</div><h2>产前准备｜Excel 清单节选</h2></div><span class="ps-pill">从实际表格脱敏整理</span></div>
-  <div class="ps-excel-card">
-    <div class="ps-excel-head"><div><span class="ps-excel-icon" aria-hidden="true">X</span><strong>试产准备清单</strong><small>原始清单 68 项 · 以下选取部分内容</small></div><span class="ps-excel-tab">产前核对</span></div>
-    <div class="ps-excel-scroll" tabindex="0" aria-label="横向滚动查看试产准备事项脱敏表">
-      <table class="ps-excel-table" aria-label="试产准备清单实际内容脱敏节选">
-        <colgroup><col style="width:9%"><col style="width:24%"><col style="width:48%"><col style="width:19%"></colgroup>
-        <thead><tr><th scope="col">类别</th><th scope="col">准备事项</th><th scope="col">核对重点（简化）</th><th scope="col">时间节点</th></tr></thead>
-        <tbody>
-          <tr><td><span class="ps-excel-tag">人</span></td><td><b>后段人力安排</b></td><td>与测试、工艺等接口核对特殊作业及人员需求</td><td>试产启动前</td></tr>
-          <tr><td><span class="ps-excel-tag">机</span></td><td><b>线体、夹治具准备</b></td><td>确认线体安排、工装到料及设备点检情况</td><td>开线前</td></tr>
-          <tr><td><span class="ps-excel-tag">料</span></td><td><b>物料齐套</b></td><td>检查当前试产配置的缺料和可上线情况</td><td>上线前</td></tr>
-          <tr><td><span class="ps-excel-tag">料</span></td><td><b>重点管控物料</b></td><td>关注余量有限的物料，提前沟通准备风险</td><td>试产启动前</td></tr>
-          <tr><td><span class="ps-excel-tag">料</span></td><td><b>特殊物料准备</b></td><td>确认特殊供料形式及对应的上线准备要求</td><td>试产启动前</td></tr>
-          <tr><td><span class="ps-excel-tag">料</span></td><td><b>仓储备料</b></td><td>核对备料需求及现场领取、上料准备安排</td><td>上线前</td></tr>
-          <tr><td><span class="ps-excel-tag">法</span></td><td><b>工单与验证资料</b></td><td>确认工单、验证资料及适用范围是否对应</td><td>试产启动前</td></tr>
-          <tr><td><span class="ps-excel-tag">法</span></td><td><b>研发资料准备</b></td><td>核对物料清单、工程图纸及版本更新情况</td><td>试产启动前</td></tr>
-          <tr><td><span class="ps-excel-tag">环</span></td><td><b>现场环境准备</b></td><td>确认现场整理与基本作业环境检查</td><td>开线前</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="ps-excel-bottom"><span class="ps-excel-dot"></span><span>Excel 工作方式：逐项核对 → 记录缺口 → 联系接口 → 持续跟进</span></div>
-  </div>
-  <p class="ps-disclosure">表格根据实际团队清单选取、改写并脱敏，不是原始文件截图，也没有虚构“已完成”状态。试产前我按清单逐项核对，但实际生产仍可能遇到新增需求或临时异常。</p>
+<div class="ps-heading"><div><div class="ps-eyebrow">06 / REDACTED EXCEL ORIGINAL</div><h2>试产准备表｜68项完整清单</h2></div><span class="ps-pill">原表全部 68 条</span></div>
+<div class="dp-filebar"><span class="dp-x">X</span><div><b>试产准备表 · Excel 原件脱敏版</b><small>原始顺序 · 具体描述 · 完成节点 · 责任岗位</small></div></div>
+<div class="dp-sheet-scroll" tabindex="0" aria-label="横向滚动查看68项准备表"><table class="dp-sheet"><colgroup><col style="width:52px"><col style="width:64px"><col style="width:215px"><col style="width:510px"><col style="width:120px"><col style="width:155px"></colgroup>
+<thead><tr><th>序号</th><th>类别</th><th>事项</th><th>具体描述（脱敏）</th><th>需完成时间</th><th>责任接口</th></tr></thead><tbody><tr><td class="dp-n">01</td><td class="dp-cat">人</td><td class="dp-task">贴片、手焊，飞线及X-Ray检测人力</td><td class="dp-detail">手焊、批量维修属于额外作业需求，应在试产前与研发确认任务范围及作业指导。</td><td class="dp-time">试产启动前</td><td class="dp-owner">OPM / 基带提供作业指导书</td></tr>
+<tr><td class="dp-n">02</td><td class="dp-cat">人</td><td class="dp-task">线体IDL、DL人力资质审核</td><td class="dp-detail">班组长、贴片员、印刷、目检是否符合在岗资质</td><td class="dp-time">试产启动前</td><td class="dp-owner">PQE / 平台质量稽查</td></tr>
+<tr><td class="dp-n">03</td><td class="dp-cat">人</td><td class="dp-task">特殊工艺上岗操作培训</td><td class="dp-detail">特殊操作需要工艺按照SOP给员工培训，质量检查效果，达到作业能力标准后才能上岗作业，如钎焊</td><td class="dp-time">试产启动前</td><td class="dp-owner">PE/PQE/生产</td></tr>
+<tr><td class="dp-n">04</td><td class="dp-cat">人</td><td class="dp-task">工厂团队清单</td><td class="dp-detail">OPM:<br>SIE:<br>DFX:<br>PQE:<br>PE:<br>TE:<br>FAE:</td><td class="dp-time">试产启动前</td><td class="dp-owner">PE/PQE/OPM</td></tr>
+<tr><td class="dp-n">05</td><td class="dp-cat">人</td><td class="dp-task">NPI团队清单</td><td class="dp-detail">NPI PM:<br>NPI PE:<br>制造代表：</td><td class="dp-time">试产启动前</td><td class="dp-owner">OPM / NPI</td></tr>
+<tr><td class="dp-n">06</td><td class="dp-cat">人</td><td class="dp-task">后段人力预排</td><td class="dp-detail">TE提供测试所需人力，PE提供点胶、钎焊人力，OPM综合根据测试和辅料站位预排测试人力</td><td class="dp-time">试产启动前2天</td><td class="dp-owner">OPM</td></tr>
+<tr><td class="dp-n">07</td><td class="dp-cat">人</td><td class="dp-task">RD团队清单</td><td class="dp-detail">RD PM:<br>MPM:<br>RF：<br>EE：<br>SW：</td><td class="dp-time">试产启动前</td><td class="dp-owner">PM/EE/RF / 研发PM</td></tr>
+<tr><td class="dp-n">08</td><td class="dp-cat">人</td><td class="dp-task">客户跟线人员</td><td class="dp-detail">确认客户端有哪些人会进行产线现场跟线，MD要提前对应进行准备</td><td class="dp-time">客户到厂前1天</td><td class="dp-owner">OPM / 各领域研发</td></tr>
+<tr><td class="dp-n">09</td><td class="dp-cat">机</td><td class="dp-task">SMT贴片线体确定</td><td class="dp-detail">按不同板件核对 SMT 贴片线体与资源安排（具体线号不公开）。</td><td class="dp-time">试产启动前3天</td><td class="dp-owner">FPM</td></tr>
+<tr><td class="dp-n">10</td><td class="dp-cat">机</td><td class="dp-task">SMT贴片夹治具及设备准备</td><td class="dp-detail">夹治具及设备到料及点检验收完成：钢网、载具、裁板夹治具等</td><td class="dp-time">试产启动前3天</td><td class="dp-owner">PE</td></tr>
+<tr><td class="dp-n">11</td><td class="dp-cat">机</td><td class="dp-task">设备保养、精度风险确认</td><td class="dp-detail">核对设备保养、近期异常和精度风险。关注如贴片设备污染、分板精度偏差导致的质量隐患，由工程接口确认。</td><td class="dp-time">试产启动前</td><td class="dp-owner">ME/PE</td></tr>
+<tr><td class="dp-n">12</td><td class="dp-cat">机</td><td class="dp-task">测试机台认证</td><td class="dp-detail">提前将需要测试的对应地方整理好；layout规划+架设认证schedule</td><td class="dp-time">试产启动前</td><td class="dp-owner">TE</td></tr>
+<tr><td class="dp-n">13</td><td class="dp-cat">机</td><td class="dp-task">后段设备&amp;特殊工艺设备</td><td class="dp-detail">尤其注意激光分板设备资源冲突、后段设备资源、维修资源协调——后段人员提前协调</td><td class="dp-time">试产启动前</td><td class="dp-owner">FPM</td></tr>
+<tr><td class="dp-n">14</td><td class="dp-cat">料</td><td class="dp-task">SMT物料齐套</td><td class="dp-detail">物料CTB齐套跟踪</td><td class="dp-time">该配置上线前</td><td class="dp-owner">OPM / PM/MPM</td></tr>
+<tr><td class="dp-n">15</td><td class="dp-cat">料</td><td class="dp-task">重点管控物料清单</td><td class="dp-detail">涉及到0或者极少数量Buffer的物料，需要RD PM在试产准备会议上提供清单</td><td class="dp-time">试产启动前</td><td class="dp-owner">OPM / PM/MPM</td></tr>
+<tr><td class="dp-n">16</td><td class="dp-cat">料</td><td class="dp-task">烧录物料/盘装料特殊物料确认</td><td class="dp-detail">烧录物料/盘装料等特殊物料产前确认并进行对应安排，如提前领料烧录验证；盘装料提前准备托盘和调试。物料发至边仓，TE对接跟进</td><td class="dp-time">试产启动前</td><td class="dp-owner">OPM / PM/MPM</td></tr>
+<tr><td class="dp-n">17</td><td class="dp-cat">料</td><td class="dp-task">包材准备</td><td class="dp-detail">单板出货研发/海外需求时，要准备相应包材（研发提包材领用单，边仓领取）</td><td class="dp-time">试产启动前</td><td class="dp-owner">OPM / PM/MPM</td></tr>
+<tr><td class="dp-n">18</td><td class="dp-cat">料</td><td class="dp-task">耗材需求准备</td><td class="dp-detail">专用托盘需求数量并及时申请料号--PE；给商务报价--FPM</td><td class="dp-time">试产启动前7天</td><td class="dp-owner">FPM&amp;PE</td></tr>
+<tr><td class="dp-n">19</td><td class="dp-cat">料</td><td class="dp-task">边仓备料</td><td class="dp-detail">为仓库预留备料与上料窗口（原清单建议至少两个班次）；时间不足时对外预警并协调加急。</td><td class="dp-time">试产前1天</td><td class="dp-owner">OPM / PM</td></tr>
+<tr><td class="dp-n">20</td><td class="dp-cat">料</td><td class="dp-task">库存旧料清理</td><td class="dp-detail">build前须将仓库不允许在本阶段消耗的旧料隔离掉，包含PCBA</td><td class="dp-time">试产启动前</td><td class="dp-owner">OPM / PM/MPM</td></tr>
+<tr><td class="dp-n">21</td><td class="dp-cat">料</td><td class="dp-task">产线改板PCB隔离</td><td class="dp-detail">如果有改板，需要提前将产线调机板隔离</td><td class="dp-time">试产启动前</td><td class="dp-owner">FPM</td></tr>
+<tr><td class="dp-n">22</td><td class="dp-cat">料</td><td class="dp-task">湿敏物料烘烤要求(烘烤清单）</td><td class="dp-detail">及时烘烤和保存（物料超期才需要烘烤）：<br>Level 1: 无限制<br>Level 2: 1年<br>Level 2A: 4周<br>Level 3: 1周<br>Level 4：72H<br>Level 5：48H<br>Level 5A：24H</td><td class="dp-time">试产启动前3天</td><td class="dp-owner">MFG</td></tr>
+<tr><td class="dp-n">23</td><td class="dp-cat">料</td><td class="dp-task">辅料</td><td class="dp-detail">PE输出锡膏、胶水等辅料资料信息（生产前一个班次回温，开班领出，任何异常开班反馈）。PE、QE检查，生产上线前确认</td><td class="dp-time">试产启动前半天</td><td class="dp-owner">PE/PQE</td></tr>
+<tr><td class="dp-n">24</td><td class="dp-cat">料</td><td class="dp-task">上料表上传</td><td class="dp-detail">配置上线前程序需将料表上传MES，边仓根据料表信息备料上料，打印纸质版上料表给到产线进行核料</td><td class="dp-time">配置上线前</td><td class="dp-owner">程序/边仓</td></tr>
+<tr><td class="dp-n">25</td><td class="dp-cat">料</td><td class="dp-task">物料配置</td><td class="dp-detail">对多板组合等特殊配置确认 BOM 物料配置，尤其关注 FPC 与子板搭配，防止错料。</td><td class="dp-time">试产启动前</td><td class="dp-owner">OPM / 研发PM</td></tr>
+<tr><td class="dp-n">26</td><td class="dp-cat">料</td><td class="dp-task">验证单释放边仓</td><td class="dp-detail">需求PE打印出验证单释放给边仓领取验证料</td><td class="dp-time">试产启动前</td><td class="dp-owner">PM/PE/边仓</td></tr>
+<tr><td class="dp-n">27</td><td class="dp-cat">料</td><td class="dp-task">研发借板需登记+锁板，提领用单</td><td class="dp-detail">锁板是为了归还主板后产线目检。若FATP反馈有不良可以先排查是否有借出记录</td><td class="dp-time">—</td><td class="dp-owner">FPM/PQE / 研发PM</td></tr>
+<tr><td class="dp-n">28</td><td class="dp-cat">料</td><td class="dp-task">备料需求下发</td><td class="dp-detail">BOM、准备表及关联工单资料按时推送内部系统，通知物控下发备料需求，并提前释放验证资料。</td><td class="dp-time">试产启动前3天</td><td class="dp-owner">OPM / 研发PM/物控</td></tr>
+<tr><td class="dp-n">29</td><td class="dp-cat">料</td><td class="dp-task">PCBA半成品出货</td><td class="dp-detail">出货allocation，出组装/客户，出货表提前释放给OPM和仓库</td><td class="dp-time">试产启动前</td><td class="dp-owner">仓库/OPM / 研发PM</td></tr>
+<tr><td class="dp-n">30</td><td class="dp-cat">料</td><td class="dp-task">测试站位辅料</td><td class="dp-detail">试产阶段测试站位辅料（如OTG、U盘等）由NPI、TE提供</td><td class="dp-time">测试开始前</td><td class="dp-owner">TE/生产/OPM / NPI</td></tr>
+<tr><td class="dp-n">31</td><td class="dp-cat">料</td><td class="dp-task">PCBA库存管理确认</td><td class="dp-detail">仓库有无上阶段/同阶段同料号板，如何避免发板错误导致组装投入异常。（镭雕＋入库＋领板 标识配置名）<br>仓库入库后PCBA是否账实一致，组装需求/研发需求仓库是否清楚</td><td class="dp-time">试产过程中</td><td class="dp-owner">FPM/仓库</td></tr>
+<tr><td class="dp-n">32</td><td class="dp-cat">料</td><td class="dp-task">调机板/炉温板/金板需求</td><td class="dp-detail">炉温板需求提前和工程(PE ME TE)确认，提前确认数量。注意在KO meeting中向研发提出工厂会有样板/金板需求，要求研发在PCB投板知会制造端，制造端讲制造诉求提供给RD PM，保留拼板等特殊要求</td><td class="dp-time">试产启动前</td><td class="dp-owner">FPM / NPI</td></tr>
+<tr><td class="dp-n">33</td><td class="dp-cat">料</td><td class="dp-task">一个料号对应几种特殊标识</td><td class="dp-detail">建议研发拉通手提上线，避免错漏混，手提上线要求研发现场跟进</td><td class="dp-time">试产启动前</td><td class="dp-owner">FPM / PM</td></tr>
+<tr><td class="dp-n">34</td><td class="dp-cat">料</td><td class="dp-task">手提物料</td><td class="dp-detail">特殊手提验证料如缺少正常入库或追溯标识（DID），须提前确认物料交接、特殊系统上线方案及书面审批，并同步相关接口。内部具体系统操作已隐去。</td><td class="dp-time">试产启动前</td><td class="dp-owner">OPM/MES / 研发PM</td></tr>
+<tr><td class="dp-n">35</td><td class="dp-cat">料</td><td class="dp-task">治具和图纸</td><td class="dp-detail">要求NPI PE、PE、供应商三方核对</td><td class="dp-time">试产启动前1天</td><td class="dp-owner">PE/OPM / NPI PE</td></tr>
+<tr><td class="dp-n">36</td><td class="dp-cat">法</td><td class="dp-task">主板/小板连板数</td><td class="dp-detail">拼版数过多需考虑是否能正常镭雕/是否会影响生产条码/是否会超设备轨道上限；若无法正常镭雕，贴纸质条码，下阶段要求研发改进</td><td class="dp-time">试产启动前</td><td class="dp-owner">PE</td></tr>
+<tr><td class="dp-n">37</td><td class="dp-cat">法</td><td class="dp-task">试产配置&amp;料号</td><td class="dp-detail">试产配置创建&amp;料号申请---&gt;下发工单</td><td class="dp-time">试产启动前3天</td><td class="dp-owner">PM</td></tr>
+<tr><td class="dp-n">38</td><td class="dp-cat">法</td><td class="dp-task">研发资料清单下发时间</td><td class="dp-detail">BOM: 上线前3天 基带<br>GERBER文件：上线前14天<br>钢网文件：上线前14天 基带<br>坐标文件：上线前14天 基带<br>拼版文件：上线前14天 基带<br>器件位号图：上线前14天 基带<br>原理图：上线前7天 基带<br>3D图纸：确认图纸物料和BOM是否有偏差，有偏差需要专业人员评估风险 基带<br>ECN：上线前7天 基带</td><td class="dp-time">试产启动前</td><td class="dp-owner">PE/TE/OPM / 研发PM</td></tr>
+<tr><td class="dp-n">39</td><td class="dp-cat">法</td><td class="dp-task">防错料</td><td class="dp-detail">依据 BOM 与验证资料核对 PCB 防错料信息，涉及烧录或料号变化时须再次确认标识。</td><td class="dp-time">试产启动前</td><td class="dp-owner">MES</td></tr>
+<tr><td class="dp-n">40</td><td class="dp-cat">法</td><td class="dp-task">夹治具清单商务approve</td><td class="dp-detail">PE需将夹治具清单给到OPM/商务，除非时间很紧，也需要客户/NPI approve后才能下单</td><td class="dp-time">夹具下单前</td><td class="dp-owner">PE/PM</td></tr>
+<tr><td class="dp-n">41</td><td class="dp-cat">法</td><td class="dp-task">夹治具准备表</td><td class="dp-detail">包含下单时间+到货时间+架设时间+认证时间+客户approve时间</td><td class="dp-time">试产启动前</td><td class="dp-owner">PE/TE</td></tr>
+<tr><td class="dp-n">42</td><td class="dp-cat">法</td><td class="dp-task">试产准备表&amp;关联</td><td class="dp-detail">准备表创建&amp;推送关联</td><td class="dp-time">试产启动前</td><td class="dp-owner">OPM</td></tr>
+<tr><td class="dp-n">43</td><td class="dp-cat">法</td><td class="dp-task">测试软件下发</td><td class="dp-detail">测试启动前研发需要下发测试脚本，要求研发释放邮件</td><td class="dp-time">试产启动前1天</td><td class="dp-owner">TE / 研发 软件</td></tr>
+<tr><td class="dp-n">44</td><td class="dp-cat">法</td><td class="dp-task">验证单归档锁定</td><td class="dp-detail">验证资料按要求归档并书面同步；临时变更需通知相关接口，涉及物料变化须同步物控及仓库。</td><td class="dp-time">试产启动前1天</td><td class="dp-owner">PM / 研发PM</td></tr>
+<tr><td class="dp-n">45</td><td class="dp-cat">法</td><td class="dp-task">叉板管控</td><td class="dp-detail">来料上线需要确认叉板数量以及是否做好标识，切勿在叉板上打件，避免物料不足，账务对不上</td><td class="dp-time">试产启动前</td><td class="dp-owner">PE</td></tr>
+<tr><td class="dp-n">46</td><td class="dp-cat">法</td><td class="dp-task">客户料号不能为空（工单平台 料号）</td><td class="dp-detail">内部工单平台的料号字段需完整，缺失时按规则确认处理方式，避免开单报错。</td><td class="dp-time">试产启动前</td><td class="dp-owner">计划 / 研发PM</td></tr>
+<tr><td class="dp-n">47</td><td class="dp-cat">法</td><td class="dp-task">计划/MES维护工单</td><td class="dp-detail">计划与系统接口确认线体维护、工单发布及基础信息正确。</td><td class="dp-time">试产启动前</td><td class="dp-owner">计划/MES</td></tr>
+<tr><td class="dp-n">48</td><td class="dp-cat">法</td><td class="dp-task">手焊SOP</td><td class="dp-detail">提供手焊SOP，明确焊接位置、物料图片及料号等信息 Check</td><td class="dp-time">手焊启动前</td><td class="dp-owner">EE&amp;RF&amp;PE</td></tr>
+<tr><td class="dp-n">49</td><td class="dp-cat">法</td><td class="dp-task">SOP审核</td><td class="dp-detail">测试SOP须PE与QE审核，确认本次新增及删减差异物料及制程 Check</td><td class="dp-time">试产启动前</td><td class="dp-owner">PE&amp;PQE</td></tr>
+<tr><td class="dp-n">50</td><td class="dp-cat">法</td><td class="dp-task">工艺流程</td><td class="dp-detail">SMT贴片及测试工艺流程确认 Check</td><td class="dp-time">试产启动前</td><td class="dp-owner">PE/TE/HWTE</td></tr>
+<tr><td class="dp-n">51</td><td class="dp-cat">法</td><td class="dp-task">特殊工艺/设备需求</td><td class="dp-detail">特殊工艺（钎焊）管控（风险/进度/良率）</td><td class="dp-time">试产启动前</td><td class="dp-owner">PE/DFX</td></tr>
+<tr><td class="dp-n">52</td><td class="dp-cat">法</td><td class="dp-task">钢网/刮刀/锡膏型号确认</td><td class="dp-detail">PE需提前与MES确认好，让MES维护正确的型号，避免试产过程中出现报错的现象</td><td class="dp-time">配置上线前</td><td class="dp-owner">PE</td></tr>
+<tr><td class="dp-n">53</td><td class="dp-cat">法</td><td class="dp-task">MES流程验证</td><td class="dp-detail">有更新的工艺流程需开虚拟工单在线试跑验证，并且质量进行认证，MES、HWTE提供虚拟工单验证报告，虚拟工单跑完后进行关单</td><td class="dp-time">试产启动前</td><td class="dp-owner">SIE/PQE</td></tr>
+<tr><td class="dp-n">54</td><td class="dp-cat">法</td><td class="dp-task">质量要求</td><td class="dp-detail">一次良率、最终良率目标由对应专业接口确认；原表并无实际目标数值。</td><td class="dp-time">测试启动前</td><td class="dp-owner">PM</td></tr>
+<tr><td class="dp-n">55</td><td class="dp-cat">法</td><td class="dp-task">试产变更评审</td><td class="dp-detail">输出checklist并和团队评审</td><td class="dp-time">—</td><td class="dp-owner">PM/SIE</td></tr>
+<tr><td class="dp-n">56</td><td class="dp-cat">法</td><td class="dp-task">目检检验标准</td><td class="dp-detail">需要和FATP核对，研发在试产启动前释放目检标准</td><td class="dp-time">试产启动前</td><td class="dp-owner">PQE / 组装PQE</td></tr>
+<tr><td class="dp-n">57</td><td class="dp-cat">环</td><td class="dp-task">产线5S整理</td><td class="dp-detail">注意提前做好线体5S</td><td class="dp-time">试产启动前</td><td class="dp-owner">FPM</td></tr>
+<tr><td class="dp-n">58</td><td class="dp-cat">环</td><td class="dp-task">ESD/温湿度</td><td class="dp-detail">试产启动前做好ESD和温湿度检查，禁止裸手拿板</td><td class="dp-time">试产启动前</td><td class="dp-owner">PQE</td></tr>
+<tr><td class="dp-n">59</td><td class="dp-cat">环</td><td class="dp-task">开线readiness checklist</td><td class="dp-detail">按开线准备要求检查作业环境与质量条件，特殊线体按相应规范处理。</td><td class="dp-time">试产启动前</td><td class="dp-owner">PQE</td></tr>
+<tr><td class="dp-n">60</td><td class="dp-cat">环</td><td class="dp-task">layout规划</td><td class="dp-detail">根据process flow准备对应的layout，尤其涉及CCD、点焊、UV胶等特殊工艺。IE输出后段站位图纸</td><td class="dp-time">试产启动前</td><td class="dp-owner">IE</td></tr>
+<tr><td class="dp-n">61</td><td class="dp-cat">环</td><td class="dp-task">线体保密工作</td><td class="dp-detail">特殊线体按制度完成认证与信息安全报备，内部代号和审批细节不公开。</td><td class="dp-time">试产启动前</td><td class="dp-owner">—</td></tr>
+<tr><td class="dp-n">62</td><td class="dp-cat">其他</td><td class="dp-task">上阶段LL宣讲</td><td class="dp-detail">上阶段运行过程中的痛点问题进行宣导，该阶段改善</td><td class="dp-time">试产结束后</td><td class="dp-owner">OPM</td></tr>
+<tr><td class="dp-n">63</td><td class="dp-cat">其他</td><td class="dp-task">上阶段工时确认</td><td class="dp-detail">上阶段试产工时未完成确认，本阶段不允许启动</td><td class="dp-time">试产启动后</td><td class="dp-owner">OPM / RD PM</td></tr>
+<tr><td class="dp-n">64</td><td class="dp-cat">其他</td><td class="dp-task">工单平台信息确认</td><td class="dp-detail">核对工单平台中的客户料号、SN 号段等必要字段，实际编号不公开。</td><td class="dp-time">试产启动前</td><td class="dp-owner">OPM / PM</td></tr>
+<tr><td class="dp-n">65</td><td class="dp-cat">其他</td><td class="dp-task">首件测试需求</td><td class="dp-detail">需要注意板子首件是否先预留给基带测试后，再余板正常贴片</td><td class="dp-time">—</td><td class="dp-owner">生产/IPQC/工艺 / 基带/PM</td></tr>
+<tr><td class="dp-n">66</td><td class="dp-cat">其他</td><td class="dp-task">MIL更新</td><td class="dp-detail">QE和相关领域针对试产问题进项更新，分析并对此做出对应的改善</td><td class="dp-time">试产过程中</td><td class="dp-owner">SIE/PQE / QE</td></tr>
+<tr><td class="dp-n">67</td><td class="dp-cat">其他</td><td class="dp-task">工单数量合理性</td><td class="dp-detail">工单数量÷拼板数是否为整数，非整数要求研发修改数量/同意超领PCB（叉板超领），提前告知研发准备buffer</td><td class="dp-time">试产启动前</td><td class="dp-owner">OPM / 研发PM</td></tr>
+<tr><td class="dp-n">68</td><td class="dp-cat">其他</td><td class="dp-task">夹治具数量</td><td class="dp-detail">过炉夹治具保持在2~3轮能够打完</td><td class="dp-time">试产启动前</td><td class="dp-owner">OPM, PE / NPI PE，研发PM</td></tr></tbody></table></div>
+<div class="dp-sheetfoot">原表68项已完整保留；删去个人姓名、内部标识及少数敏感操作说明。原始文件的状态、实际完成日期字段未填写，故未补造状态。</div>
+<p class="ps-disclosure">这是团队协作使用的准备清单。我在产前逐项核对事项的适用性与准备情况，并联系相关接口跟进缺口。产前核对不能保证产中不会出现新的变化或临时异常。</p>
 </section>
 
 <section class="ps-section report" id="todo-visual">
